@@ -61,3364 +61,3364 @@ dns:
   - 157.148.47.204
   public_ip_lookup_url: ifconfig.me/ip
 policy_groups:
-- external:
-    name: 手动选择
-    type: select
-    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Egern.png
-- url_test:
-    name: 全球自动策略
-    use_all: true
-    tolerance: 50
-    interval: 600
-    flatten: true
-    filter: "^(?!.*((?i)回国|校园)).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
-- select:
-    name: 全球手动策略
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "^(?!.*((?i)回国|校园)).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
-- select:
-    name: 香港手动策略
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1ED\U0001F1F0|香港|(\\b(HK|HKG|Hong)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    tolerance: 50
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-- url_test:
-    name: 香港时延优选
-    use_all: true
-    tolerance: 50
-    interval: 600
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1ED\U0001F1F0|香港|(\\b(HK|HKG|Hong)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-- select:
-    name: 台湾手动策略
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1F9\U0001F1FC|台湾|(\\b(TW|Tai|Taiwan)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    tolerance: 50
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
-- url_test:
-    name: 台湾时延优选
-    use_all: true
-    tolerance: 50
-    interval: 600
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1F9\U0001F1FC|台湾|(\\b(TW|Tai|Taiwan)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
-- select:
-    name: 日本手动策略
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1EF\U0001F1F5|日本|(\\b(JP|JPN|Japan)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    tolerance: 50
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-- url_test:
-    name: 日本时延优选
-    use_all: true
-    tolerance: 50
-    interval: 600
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1EF\U0001F1F5|日本|(\\b(JP|JPN|Japan)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-- select:
-    name: 韩国手动策略
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1F0\U0001F1F7|韩国|首尔|(\\b(KR|KOR|Korea)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    tolerance: 50
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-- url_test:
-    name: 韩国时延优选
-    use_all: true
-    tolerance: 50
-    interval: 600
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1F0\U0001F1F7|韩国|首尔|(\\b(KR|KOR|Korea)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-- select:
-    name: 新国/狮城手动策略
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1F8\U0001F1EC|新加坡|狮城|(\\b(SG|SGP|Singapore)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    tolerance: 50
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-- url_test:
-    name: 新国/狮城时延优选
-    use_all: true
-    tolerance: 50
-    interval: 600
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1F8\U0001F1EC|新加坡|狮城|(\\b(SG|SGP|Singapore)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-- select:
-    name: 美国手动策略
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1FA\U0001F1F8|美国|洛杉矶|硅谷|(\\b(US|USA|United States)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    tolerance: 50
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-- url_test:
-    name: 美国时延优选
-    use_all: true
-    tolerance: 50
-    interval: 600
-    flatten: true
-    filter: "^(?=.*((?i)\U0001F1FA\U0001F1F8|美国|洛杉矶|硅谷|(\\b(US|USA|United States)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-- select:
-    name: 游戏专线
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "(?i)游戏|GAME|Game|专线"
-    tolerance: 50
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-- select:
-    name: 国际媒体
-    policies:
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球自动策略
-    - 全球手动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-- select:
-    name: 苹果服务
-    policies:
-    - DIRECT
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球自动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
-- select:
-    name: 微软服务
-    policies:
-    - DIRECT
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球自动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-- select:
-    name: 谷歌服务
-    policies:
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球自动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-- select:
-    name: 电报消息
-    policies:
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球自动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-- select:
-    name: 推特消息
-    policies:
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球自动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
-- select:
-    name: AI
-    policies:
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球自动策略
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-- select:
-    name: 游戏平台
-    policies:
-    - 游戏专线
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球自动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-- select:
-    name: 哔哩哔哩
-    policies:
-    - DIRECT
-    - 香港时延优选
-    - 台湾时延优选
-    - 全球自动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
-- select:
-    name: Emby
-    policies:
-    - 手动选择
-    - DIRECT
-    flatten: true
-    filter: "^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|邮箱|工单|群|通知)).*$"
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-- select:
-    name: GitHub
-    policies:
-    - DIRECT
-    - 全球自动策略
-    - 全球手动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
-- select:
-    name: Discord
-    policies:
-    - 全球自动策略
-    - 全球手动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
-- select:
-    name: Line
-    policies:
-    - 全球自动策略
-    - 全球手动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Line.png
-- select:
-    name: PayPal
-    policies:
-    - DIRECT
-    - 全球自动策略
-    - 全球手动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
-- select:
-    name: Siri
-    policies:
-    - DIRECT
-    - 全球自动策略
-    - 全球手动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Siri.png
-- select:
-    name: Voice
-    policies:
-    - DIRECT
-    - 全球自动策略
-    - 全球手动策略
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Voice.png
-- fallback:
-    name: 兜底后备策略
-    policies:
-    - DIRECT
-    - 全球自动策略
-    - 香港时延优选
-    - 台湾时延优选
-    - 日本时延优选
-    - 韩国时延优选
-    - 新国/狮城时延优选
-    - 美国时延优选
-    - 全球手动策略
-    interval: 600
-    tolerance: 150
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
-- select:
-    name: Reddit
-    policies:
-    - 手动选择
-    flatten: false
-    hidden: true
-- load_balance:
-    name: 喜马拉雅
-    policies:
-    - DIRECT
-    - 手动选择
-    flatten: false
-    hidden: true
-- select:
-    name: 搜狐
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 前程无忧
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 饿了么
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 苏宁
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 爱企查
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 咪咕
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 乐视
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 滴滴出行
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 什么值得买
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 人人影视
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 豆瓣
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 凤凰网
-    policies:
-    - 手动选择
-    flatten: false
-    hidden: true
-- select:
-    name: 唯品会
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 钉钉
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 网易云音乐
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: Soul
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: OKX
-    policies:
-    - 手动选择
-    flatten: false
-    hidden: true
-- select:
-    name: QQ音乐
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 百度贴吧
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 快手
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- load_balance:
-    name: 蓝奏云
-    policies:
-    - DIRECT
-    - 手动选择
-    flatten: false
-    hidden: true
-- select:
-    name: 优酷
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 微博
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 小红书
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 美图秀秀
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: 搜狗输入法
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: 京东
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: ChinaDNS
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 拼多多
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: 网易
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 谷歌推送
-    policies:
-    - 手动选择
-    icon: ''
-    hidden: true
-- load_balance:
-    name: 百度
-    policies:
-    - DIRECT
-    - 手动选择
-    flatten: false
-    hidden: true
-- select:
-    name: iCloud
-    policies:
-    - DIRECT
-    - 手动选择
-    icon: ''
-    hidden: true
-- select:
-    name: 同程旅行
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 建设银行
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 广发银行
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 交通银行
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 光大银行
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 邮政银行
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 农业银行
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: 招商银行
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: 中国银行
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: 中国联通
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 中国电信
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 高德地图
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 爱奇艺
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- load_balance:
-    name: App Store
-    policies:
-    - DIRECT
-    - 手动选择
-    flatten: false
-    hidden: true
-- select:
-    name: QQ
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 支付宝
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 美团
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 虎牙
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 携程
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: '115'
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 腾讯视频
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: 币安
-    policies:
-    - 手动选择
-    flatten: false
-    hidden: true
-- select:
-    name: 抖音
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: Instagram
-    policies:
-    - 手动选择
-    icon: ''
-    hidden: true
-- load_balance:
-    name: TestFlight
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: WeChat
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: iBL3ND
-    policies:
-    - DIRECT
-    - 手动选择
-    - 新国节点
-    - 香港手动策略
-    - 日本手动策略
-    - 韩国手动策略
-    - 台湾手动策略
-    - 美国手动策略
-    - 马来节点
-    - 泰国节点
-    - 印度节点
-    - 越南节点
-    - 专线节点
-    - AiTk节点
-    - 澳门节点
-    - 菲律宾节点
-    - 印度尼西亚节点
-    - 柬埔寨节点
-    - 不丹节点
-    - 缅甸节点
-    - 老挝节点
-    - 澳大利亚
-    - 尼泊尔节点
-    - 巴基斯坦节点
-    - 孟加拉节点
-    - 斯里兰卡节点
-    - 蒙古节点
-    - 土库曼斯坦节点
-    - 哈萨克斯坦节点
-    - 乌兹别克斯坦节点
-    - 土耳其节点
-    - 塔吉克斯坦节点
-    - 马尔代夫节点
-    - 伊朗节点
-    - 吉尔吉斯斯坦节点
-    - 以色列节点
-    - 阿联酋节点
-    - 沙特阿拉伯节点
-    - 卡塔尔节点
-    - 科威特节点
-    - 阿曼节点
-    - 巴林节点
-    - 约旦节点
-    - 黎巴嫩节点
-    - 叙利亚节点
-    - 伊拉克节点
-    - 阿富汗节点
-    - 也门节点
-    - 马尔代夫节点
-    - 不丹节点
-    - 塔吉克斯坦节点
-    - 土库曼斯坦节点
-    - 吉尔吉斯斯坦节点
-    - 东帝汶节点
-    - 亚美尼亚节点
-    - 阿塞拜疆节点
-    - 格鲁吉亚节点
-    - 阿尔巴尼亚节点
-    - 安道尔节点
-    - 奥地利节点
-    - 白俄罗斯节点
-    - 比利时节点
-    - 波黑节点
-    - 保加利亚节点
-    - 克罗地亚节点
-    - 塞浦路斯节点
-    - 捷克节点
-    - 丹麦节点
-    - 爱沙尼亚节点
-    - 芬兰节点
-    - 法国节点
-    - 德国节点
-    - 希腊节点
-    - 匈牙利节点
-    - 冰岛节点
-    - 爱尔兰节点
-    - 意大利节点
-    - 拉脱维亚节点
-    - 列支敦士登节点
-    - 立陶宛节点
-    - 卢森堡节点
-    - 马耳他节点
-    - 摩尔多瓦节点
-    - 摩纳哥节点
-    - 黑山节点
-    - 荷兰节点
-    - 北马其顿节点
-    - 挪威节点
-    - 波兰节点
-    - 葡萄牙节点
-    - 罗马尼亚节点
-    - 俄罗斯节点
-    - 圣马力诺节点
-    - 塞尔维亚节点
-    - 斯洛伐克节点
-    - 斯洛文尼亚节点
-    - 西班牙节点
-    - 瑞典节点
-    - 瑞士节点
-    - 乌克兰节点
-    - 英国节点
-    - 阿根廷节点
-    - 阿尔及利亚节点
-    - 安哥拉节点
-    - 安提瓜和巴布达节点
-    - 巴巴多斯节点
-    - 巴布亚新几内亚节点
-    - 巴哈马节点
-    - 巴拉圭节点
-    - 贝宁节点
-    - 博茨瓦纳节点
-    - 巴西节点
-    - 布基纳法索节点
-    - 布隆迪节点
-    - 佛得角节点
-    - 喀麦隆节点
-    - 加拿大节点
-    - 中央非洲共和国节点
-    - 乍得节点
-    - 智利节点
-    - 科摩罗节点
-    - 刚果共和国节点
-    - 刚果民主共和国节点
-    - 哥斯达黎加节点
-    - 科特迪瓦节点
-    - 古巴节点
-    - 吉布提节点
-    - 多米尼克节点
-    - 多米尼加共和国节点
-    - 厄瓜多尔节点
-    - 埃及节点
-    - 萨尔瓦多节点
-    - 赤道几内亚节点
-    - 厄立特里亚节点
-    - 埃塞俄比亚节点
-    - 斐济节点
-    - 加蓬节点
-    - 冈比亚节点
-    - 加纳节点
-    - 格林纳达节点
-    - 危地马拉节点
-    - 几内亚节点
-    - 几内亚比绍节点
-    - 圭亚那节点
-    - 海地节点
-    - 洪都拉斯节点
-    - 牙买加节点
-    - 肯尼亚节点
-    - 基里巴斯节点
-    - 科索沃节点
-    - 莱索托节点
-    - 利比里亚节点
-    - 利比亚节点
-    - 马达加斯加节点
-    - 马拉维节点
-    - 马里节点
-    - 毛里塔尼亚节点
-    - 毛里求斯节点
-    - 墨西哥节点
-    - 密克罗尼西亚节点
-    - 莫桑比克节点
-    - 纳米比亚节点
-    - 瑙鲁节点
-    - 新西兰节点
-    - 尼加拉瓜节点
-    - 尼日尔节点
-    - 尼日利亚节点
-    - 朝鲜节点
-    - 巴劳节点
-    - 巴拿马节点
-    - 秘鲁节点
-    - 卢旺达节点
-    - 圣基茨和尼维斯节点
-    - 圣卢西亚节点
-    - 圣文森特和格林纳丁斯节点
-    - 萨摩亚节点
-    - 圣多美和普林西比节点
-    - 塞内加尔节点
-    - 塞舌尔节点
-    - 塞拉利昂节点
-    - 新国节点
-    - 所罗门群岛节点
-    - 索马里节点
-    - 南非节点
-    - 南苏丹节点
-    - 苏丹节点
-    - 苏里南节点
-    - 斯威士兰节点
-    - 坦桑尼亚节点
-    - 多哥节点
-    - 汤加节点
-    - 特立尼达和多巴哥节点
-    - 突尼斯节点
-    - 图瓦卢节点
-    - 乌干达节点
-    - 乌拉圭节点
-    - 瓦努阿图节点
-    - 梵蒂冈城节点
-    - 委内瑞拉节点
-    - 赞比亚节点
-    - 津巴布韦节点
-    flatten: false
-    icon: https://iili.io/K0KrBdQ.png
-    hidden: false
-- select:
-    name: AiTk节点
-    policies:
-    - 美国手动策略
-    - 韩国手动策略
-    - 日本手动策略
-    - 台湾手动策略
-    - 新国节点
-    flatten: true
-    icon: https://iili.io/KjKWB5v.png
-    hidden: false
-- auto_test:
-    name: 新国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1EC|新加坡|Singapore|SG"
-    interval: 5
-    tolerance: 0
-    icon: https://iili.io/FaRfFXn.png
-    hidden: true
-- auto_test:
-    name: 马来节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1FE|马来西亚|马来|Malaysia|MY|Malay"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/FaA7mPV.png
-    hidden: true
-- auto_test:
-    name: 泰国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1ED|泰国|THA|TH"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/FaA5hmb.png
-    hidden: true
-- auto_test:
-    name: 印度节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EE\U0001F1F3|印度|India|IND|IN"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/FaARol9.png
-    hidden: true
-- auto_test:
-    name: 越南节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FB\U0001F1F3|越南|VNM|VN"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/FaTC2yP.png
-    hidden: true
-- auto_test:
-    name: Gemini
-    policies:
-    - 新国节点
-    - 韩国手动策略
-    - 美国手动策略
-    - 日本手动策略
-    - 台湾手动策略
-    flatten: false
-    interval: 30
-    tolerance: 5
-    hidden: true
-- auto_test:
-    name: 专线节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: IEPL|IPLC|BGP
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/Twoandz9/Fast.png
-    hidden: true
-- auto_test:
-    name: 澳门节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1F4|澳门|MAC|MO"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 荷兰节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1F1|荷兰|NLD|NL"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 阿根廷节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1F7|阿根廷|ARG|AR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 阿尔及利亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E9\U0001F1FF|阿尔及利亚|DZA|DZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 安哥拉节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1F4|安哥拉|AGO|AO"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 安提瓜和巴布达节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1EC|安提瓜和巴布达|ATG|AG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴巴多斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1E7|巴巴多斯|BRB|BB"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 纳米比亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1E6|纳米比亚|NAM|NA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 瑙鲁节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1F7|瑙鲁|NRU|NR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 新西兰节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1FF|新西兰|NZL|NZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 尼加拉瓜节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1EE|尼加拉瓜|NIC|NI"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 尼日尔节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1EA|尼日尔|NER|NE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴勒斯坦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1F8|巴勒斯坦|Palestine|PSE|PS"
-    interval: 5
-    tolerance: 0
-    hidden: true
-- auto_test:
-    name: 尼日利亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1EC|尼日利亚|NGA|NG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 朝鲜节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1F5|朝鲜|PRK|KP"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 澳大利亚
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1FA|澳大利亚|Australia|AUS|AU"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 伯利兹节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1FF|伯利兹|Belize|BZ"
-    interval: 5
-    tolerance: 0
-    hidden: true
-- auto_test:
-    name: 巴劳节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1FC|巴劳|PLW|PW"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴拿马节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1E6|巴拿马|PAN|PA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 秘鲁节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1EA|秘鲁|PER|PE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 卢旺达节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F7\U0001F1FC|卢旺达|RWA|RW"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 圣基茨和尼维斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1F3|圣基茨和尼维斯|KNA|KN"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 圣卢西亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1E8|圣卢西亚|LCA|LC"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 圣文森特和格林纳丁斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FB\U0001F1E8|圣文森特和格林纳丁斯|VCT|VC"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 萨摩亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FC\U0001F1F8|萨摩亚|WSM|WS"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 圣多美和普林西比节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1F9|圣多美和普林西比|STP|ST"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 塞内加尔节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1F3|塞内加尔|SEN|SN"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 塞舌尔节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1E8|塞舌尔|SYC|SC"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 塞拉利昂节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1F1|塞拉利昂|SLE|SL"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴布亚新几内亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1EC|巴布亚新几内亚|PNG|PG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴哈马节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1F8|巴哈马|BHS|BS"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴拉圭节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1FE|巴拉圭|PRY|PY"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 贝宁节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1EF|贝宁|BEN|BJ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 博茨瓦纳节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1FC|博茨瓦纳|BWA|BW"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴西节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1F7|巴西|BRA|BR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 莱索托节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1F8|莱索托|LSO|LS"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 利比里亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1F7|利比里亚|LBR|LR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 利比亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1FE|利比亚|LBY|LY"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 马达加斯加节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1EC|马达加斯加|MDG|MG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 马拉维节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1FC|马拉维|MWI|MW"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 马里节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1F1|马里|MLI|ML"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 毛里塔尼亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1F7|毛里塔尼亚|MRT|MR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 毛里求斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1FA|毛里求斯|MUS|MU"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 墨西哥节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1FD|墨西哥|MEX|MX"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 密克罗尼西亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EB\U0001F1F2|密克罗尼西亚|FSM|FM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 莫桑比克节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1FF|莫桑比克|MOZ|MZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 布基纳法索节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1EB|布基纳法索|BFA|BF"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 布隆迪节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1EE|布隆迪|BDI|BI"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 佛得角节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1FB|佛得角|CPV|CV"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 喀麦隆节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1F2|喀麦隆|CMR|CM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 加拿大节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1E6|加拿大|CAN|CA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 中央非洲共和国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1EB|中央非洲共和国|CAF|CF"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 乍得节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1E9|乍得|TCD|TD"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 智利节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1F1|智利|CHL|CL"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 科摩罗节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1F2|科摩罗|COM|KM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 刚果共和国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1EC|刚果共和国|COG|CG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 刚果民主共和国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1E9|刚果民主共和国|COD|CD"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 北马其顿节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1F0|北马其顿|MKD|MK"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 哥斯达黎加节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1F7|哥斯达黎加|CRI|CR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 科特迪瓦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1EE|科特迪瓦|CIV|CI"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 古巴节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1FA|古巴|CUB|CU"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 吉布提节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E9\U0001F1EF|吉布提|DJI|DJ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 多米尼克节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E9\U0001F1F2|多米尼克|DMA|DM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 多米尼加共和国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E9\U0001F1F4|多米尼加共和国|DOM|DO"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 厄瓜多尔节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EA\U0001F1E8|厄瓜多尔|ECU|EC"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 埃及节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EA\U0001F1EC|埃及|EGY|EG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 萨尔瓦多节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1FB|萨尔瓦多|SLV|SV"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 赤道几内亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1F6|赤道几内亚|GNQ|GQ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 厄立特里亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EA\U0001F1F7|厄立特里亚|ERI|ER"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 埃塞俄比亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EA\U0001F1F9|埃塞俄比亚|ETH|ET"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 斐济节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EB\U0001F1EF|斐济|FJI|FJ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 加蓬节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1E6|加蓬|GAB|GA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 冈比亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1F2|冈比亚|GMB|GM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 加纳节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1ED|加纳|GHA|GH"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 格林纳达节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1E9|格林纳达|GRD|GD"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 危地马拉节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1F9|危地马拉|GTM|GT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 几内亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1F3|几内亚|GIN|GN"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 几内亚比绍节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1FC|几内亚比绍|GNB|GW"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 圭亚那节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1FE|圭亚那|GUY|GY"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 海地节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1ED\U0001F1F9|海地|HTI|HT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 洪都拉斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1ED\U0001F1F3|洪都拉斯|HND|HN"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 牙买加节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EF\U0001F1F2|牙买加|JAM|JM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 肯尼亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1EA|肯尼亚|KEN|KE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 基里巴斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1EE|基里巴斯|KIR|KI"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 科索沃节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FD\U0001F1F0|科索沃|XKX|XK"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 挪威节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1F4|挪威|NOR|NO"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 波兰节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1F1|波兰|POL|PL"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 葡萄牙节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1F9|葡萄牙|PRT|PT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 罗马尼亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F7\U0001F1F4|罗马尼亚|ROU|RO"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 俄罗斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F7\U0001F1FA|俄罗斯|RUS|RU"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 圣马力诺节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1F2|圣马力诺|SMR|SM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 塞尔维亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F7\U0001F1F8|塞尔维亚|SRB|RS"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 斯洛伐克节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1F0|斯洛伐克|SVK|SK"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 斯洛文尼亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1EE|斯洛文尼亚|SVN|SI"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 西班牙节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EA\U0001F1F8|西班牙|ESP|ES"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 瑞典节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1EA|瑞典|SWE|SE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 瑞士节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1ED|瑞士|CHE|CH"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 乌克兰节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FA\U0001F1E6|乌克兰|UKR|UA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 英国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "^(?!.*剩余流量).*?(?:\U0001F1EC\U0001F1E7|英国|GBR|GB|EN)"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 阿尔巴尼亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1F1|阿尔巴尼亚|ALB|AL"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 安道尔节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1E9|安道尔|AND|AD"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 奥地利节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1F9|奥地利|AUT|AT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 所罗门群岛节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1E7|所罗门群岛|SLB|SB"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 索马里节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1F4|索马里|SOM|SO"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 南非节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FF\U0001F1E6|南非|ZAF|ZA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 南苏丹节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1F8|南苏丹|SSD|SS"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 苏丹节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1E9|苏丹|SDN|SD"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 苏里南节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1F7|苏里南|SUR|SR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 斯威士兰节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1FF|斯威士兰|SWZ|SZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 坦桑尼亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1FF|坦桑尼亚|TZA|TZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 多哥节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1EC|多哥|TGO|TG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 汤加节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1F4|汤加|TON|TO"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 特立尼达和多巴哥节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1F9|特立尼达和多巴哥|TTO|TT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 突尼斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1F3|突尼斯|TUN|TN"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 图瓦卢节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1FB|图瓦卢|TUV|TV"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 乌干达节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FA\U0001F1EC|乌干达|UGA|UG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 乌拉圭节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FA\U0001F1FE|乌拉圭|URY|UY"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 瓦努阿图节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FB\U0001F1FA|瓦努阿图|VUT|VU"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 梵蒂冈城节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FB\U0001F1E6|梵蒂冈|VAT|VA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 委内瑞拉节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FB\U0001F1EA|委内瑞拉|VEN|VE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 赞比亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FF\U0001F1F2|赞比亚|ZMB|ZM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 津巴布韦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FF\U0001F1FC|津巴布韦|ZWE|ZW"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 白俄罗斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1FE|白俄罗斯|BLR|BY"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 比利时节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1EA|比利时|BEL|BE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 波黑节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1E6|波斯尼亚和黑塞哥维那|BIH|BA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 保加利亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1EC|保加利亚|BGR|BG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 克罗地亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1ED\U0001F1F7|克罗地亚|HRV|HR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 塞浦路斯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1FE|塞浦路斯|CYP|CY"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/Kq9uM5Q.png
-    hidden: true
-- auto_test:
-    name: 捷克节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E8\U0001F1FF|捷克|CZE|CZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 丹麦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E9\U0001F1F0|丹麦|DNK|DK"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 爱沙尼亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EA\U0001F1EA|爱沙尼亚|EST|EE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 芬兰节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EB\U0001F1EE|芬兰|FIN|FI"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 法国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EB\U0001F1F7|法国|FRA|FR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 德国节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E9\U0001F1EA|德国|DEU|DE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 希腊节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1F7|希腊|GRC|GR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 匈牙利节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1ED\U0001F1FA|匈牙利|HUN|HU"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 冰岛节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EE\U0001F1F8|冰岛|ISL|IS"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 爱尔兰节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EE\U0001F1EA|爱尔兰|IRL|IE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 意大利节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EE\U0001F1F9|意大利|ITA|IT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 拉脱维亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1FB|拉脱维亚|LVA|LV"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 列支敦士登节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1EE|列支敦士登|LIE|LI"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 立陶宛节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1F9|立陶宛|LTU|LT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 卢森堡节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1FA|卢森堡|LUX|LU"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 马耳他节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1F9|马耳他|MLT|MT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 摩尔多瓦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1E9|摩尔多瓦|MDA|MD"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 摩纳哥节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1E8|摩纳哥|MCO|MC"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 黑山节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1EA|黑山|MNE|ME"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 东帝汶节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1F1|东帝汶|TLS|TL"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: ''
-    hidden: true
-- auto_test:
-    name: 亚美尼亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1F2|亚美尼亚|ARM|AM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KfpSO1n.png
-    hidden: true
-- auto_test:
-    name: 阿塞拜疆节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1FF|阿塞拜疆|AZE|AZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KfpQF3B.png
-    hidden: true
-- auto_test:
-    name: 格鲁吉亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EC\U0001F1EA|格鲁吉亚|GEO|GE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/Kq9G1rN.png
-    hidden: true
-- auto_test:
-    name: 马尔代夫节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1FB|马尔代夫|MDV|MV"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqdJbEB.png
-    hidden: true
-- auto_test:
-    name: 不丹节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1F9|不丹|BTN|BT"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/Kfy6Ehv.png
-    hidden: true
-- auto_test:
-    name: 塔吉克斯坦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1EF|塔吉克斯坦|TJK|TJ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: ''
-    hidden: true
-- auto_test:
-    name: 土库曼斯坦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1F2|土库曼斯坦|TKM|TM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: ''
-    hidden: true
-- auto_test:
-    name: 吉尔吉斯斯坦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1EC|吉尔吉斯斯坦|KGZ|KG"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJg1V4.png
-    hidden: true
-- auto_test:
-    name: 菲律宾节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1ED|菲律宾|PHL|PH"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 印度尼西亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EE\U0001F1E9|印度尼西亚|IDN|ID"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/Kq9rghx.png
-    hidden: true
-- auto_test:
-    name: 柬埔寨节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1ED|柬埔寨|KHM|KH"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/Kq9dVOx.png
-    hidden: true
-- auto_test:
-    name: 缅甸节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1F2|缅甸|MMR|MM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 老挝节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1E6|老挝|LAO|LA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJLDj1.png
-    hidden: true
-- auto_test:
-    name: 尼泊尔节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F3\U0001F1F5|尼泊尔|NPL|NP"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴基斯坦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F5\U0001F1F0|巴基斯坦|PAK|PK"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 孟加拉节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1E9|孟加拉|BGD|BD"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KfyvTla.png
-    hidden: true
-- auto_test:
-    name: 斯里兰卡节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1F0|斯里兰卡|LKA|LK"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 蒙古节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F2\U0001F1F3|蒙古|MNG|MN"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/Kqdo9Ps.png
-    hidden: true
-- auto_test:
-    name: 哈萨克斯坦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1FF|哈萨克斯坦|KAZ|KZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJXxne.png
-    hidden: true
-- auto_test:
-    name: 乌兹别克斯坦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FA\U0001F1FF|乌兹别克斯坦|UZB|UZ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 土耳其节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F9\U0001F1F7|土耳其|TUR|TR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 伊朗节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EE\U0001F1F7|伊朗|IRN|IR"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJqTOX.png
-    hidden: true
-- auto_test:
-    name: 以色列节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EE\U0001F1F1|以色列|ISR|IL"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJ57LB.png
-    hidden: true
-- auto_test:
-    name: 阿联酋节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1EA|阿联酋|ARE|AE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 沙特阿拉伯节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1E6|沙特阿拉伯|SAU|SA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 卡塔尔节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F6\U0001F1E6|卡塔尔|QAT|QA"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 科威特节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F0\U0001F1FC|科威特|KWT|KW"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJeUle.png
-    hidden: true
-- auto_test:
-    name: 阿曼节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F4\U0001F1F2|阿曼|OMN|OM"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- auto_test:
-    name: 巴林节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E7\U0001F1ED|巴林|BHR|BH"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KfyMikF.png
-    hidden: true
-- auto_test:
-    name: 约旦节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EF\U0001F1F4|约旦|JOR|JO"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJ0pja.png
-    hidden: true
-- auto_test:
-    name: 黎巴嫩节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F1\U0001F1E7|黎巴嫩|LBN|LB"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJbEs1.png
-    hidden: true
-- auto_test:
-    name: 叙利亚节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1F8\U0001F1FE|叙利亚|SYR|SY"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: ''
-    hidden: true
-- auto_test:
-    name: 伊拉克节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1EE\U0001F1F6|伊拉克|IRQ|IQ"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/KqJxHw7.png
-    hidden: true
-- auto_test:
-    name: 阿富汗节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1E6\U0001F1EB|阿富汗|AFG|AF"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    icon: https://iili.io/Kfpheg2.png
-    hidden: true
-- auto_test:
-    name: 也门节点
-    policies:
-    - 手动选择
-    flatten: true
-    filter: "\U0001F1FE\U0001F1EA|也门|YEM|YE"
-    interval: 5
-    tolerance: 0
-    timeout: 5
-    hidden: true
-- select:
-    name: 红果短剧
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: missav
-    policies:
-    - iBL3ND
-    flatten: false
-    hidden: true
-- select:
-    name: xvideos
-    policies:
-    - iBL3ND
-    hidden: true
-- select:
-    name: Pornhub
-    policies:
-    - iBL3ND
-    hidden: true
-- select:
-    name: 美颜相机
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: 威锋
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: 酷安
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: Netflix
-    policies:
-    - iBL3ND
-    icon: ''
-    hidden: true
-- load_balance:
-    name: Edge
-    policies:
-    - DIRECT
-    - iBL3ND
-    flatten: false
-    hidden: true
-- select:
-    name: YouTube
-    policies:
-    - iBL3ND
-    icon: ''
-    hidden: true
-- select:
-    name: Telegram
-    policies:
-    - iBL3ND
-    icon: ''
-    hidden: true
-- select:
-    name: Spotify
-    policies:
-    - iBL3ND
-    icon: ''
-    hidden: true
-- select:
-    name: X
-    policies:
-    - iBL3ND
-    icon: ''
-    hidden: true
-- select:
-    name: 微信
-    policies:
-    - DIRECT
-    icon: ''
-    hidden: true
-- select:
-    name: Speedtest
-    policies:
-    - iBL3ND
-    icon: ''
-    hidden: true
-- select:
-    name: Apple
-    policies:
-    - DIRECT
-    flatten: false
-    hidden: true
-- select:
-    name: Google
-    policies:
-    - iBL3ND
-    icon: ''
-    hidden: true
-- select:
-    name: Microsoft
-    policies:
-    - DIRECT
-    - iBL3ND
-    icon: ''
-    hidden: true
-- select:
-    name: Substore
-    policies:
-    - iBL3ND
-    icon: ''
-    hidden: true
-- select:
-    name: 国内直连
-    policies:
-    - DIRECT
-    hidden: true
-- select:
-    name: Final
-    policies:
-    - iBL3ND
-    flatten: false
-    hidden: true
-- select:
-    name: 国外网站
-    policies:
-    - 香港手动策略
-    - 美国手动策略
-    - 新国/狮城手动策略
-    - 日本手动策略
-    - 台湾手动策略
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-- select:
-    name: OpenAI
-    policies:
-    - 香港手动策略
-    - 美国手动策略
-    - 新国/狮城手动策略
-    - 日本手动策略
-    - 台湾手动策略
-    - 手动选择
-    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+  - external:
+      name: 手动选择
+      type: select
+      icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Egern.png
+  - url_test:
+      name: 全球自动策略
+      use_all: true
+      tolerance: 50
+      interval: 600
+      flatten: true
+      filter: "^(?!.*((?i)回国|校园)).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+  - select:
+      name: 全球手动策略
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "^(?!.*((?i)回国|校园)).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+  - select:
+      name: 香港手动策略
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1ED\U0001F1F0|香港|(\\b(HK|HKG|Hong)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+  - url_test:
+      name: 香港时延优选
+      use_all: true
+      tolerance: 50
+      interval: 600
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1ED\U0001F1F0|香港|(\\b(HK|HKG|Hong)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+  - select:
+      name: 台湾手动策略
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1F9\U0001F1FC|台湾|(\\b(TW|Tai|Taiwan)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+  - url_test:
+      name: 台湾时延优选
+      use_all: true
+      tolerance: 50
+      interval: 600
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1F9\U0001F1FC|台湾|(\\b(TW|Tai|Taiwan)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+  - select:
+      name: 日本手动策略
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1EF\U0001F1F5|日本|(\\b(JP|JPN|Japan)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+  - url_test:
+      name: 日本时延优选
+      use_all: true
+      tolerance: 50
+      interval: 600
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1EF\U0001F1F5|日本|(\\b(JP|JPN|Japan)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+  - select:
+      name: 韩国手动策略
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1F0\U0001F1F7|韩国|首尔|(\\b(KR|KOR|Korea)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+  - url_test:
+      name: 韩国时延优选
+      use_all: true
+      tolerance: 50
+      interval: 600
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1F0\U0001F1F7|韩国|首尔|(\\b(KR|KOR|Korea)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+  - select:
+      name: 新国/狮城手动策略
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1F8\U0001F1EC|新加坡|狮城|(\\b(SG|SGP|Singapore)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+  - url_test:
+      name: 新国/狮城时延优选
+      use_all: true
+      tolerance: 50
+      interval: 600
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1F8\U0001F1EC|新加坡|狮城|(\\b(SG|SGP|Singapore)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+  - select:
+      name: 美国手动策略
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1FA\U0001F1F8|美国|洛杉矶|硅谷|(\\b(US|USA|United States)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  - url_test:
+      name: 美国时延优选
+      use_all: true
+      tolerance: 50
+      interval: 600
+      flatten: true
+      filter: "^(?=.*((?i)\U0001F1FA\U0001F1F8|美国|洛杉矶|硅谷|(\\b(US|USA|United States)\\b)))(?!.*((?i)回国|校园|游戏|(\\bGAME\\b))).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  - select:
+      name: 游戏专线
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "(?i)游戏|GAME|Game|专线"
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+  - select:
+      name: 国际媒体
+      policies:
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球自动策略
+      - 全球手动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+  - select:
+      name: 苹果服务
+      policies:
+      - DIRECT
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球自动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_2.png
+  - select:
+      name: 微软服务
+      policies:
+      - DIRECT
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球自动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+  - select:
+      name: 谷歌服务
+      policies:
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球自动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+  - select:
+      name: 电报消息
+      policies:
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球自动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+  - select:
+      name: 推特消息
+      policies:
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球自动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+  - select:
+      name: AI
+      policies:
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球自动策略
+      icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+  - select:
+      name: 游戏平台
+      policies:
+      - 游戏专线
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球自动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+  - select:
+      name: 哔哩哔哩
+      policies:
+      - DIRECT
+      - 香港时延优选
+      - 台湾时延优选
+      - 全球自动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
+  - select:
+      name: Emby
+      policies:
+      - 手动选择
+      - DIRECT
+      flatten: true
+      filter: "^(?=.*(.*))(?!.*((?i)邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|邮箱|工单|群|通知)).*$"
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+  - select:
+      name: GitHub
+      policies:
+      - DIRECT
+      - 全球自动策略
+      - 全球手动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png
+  - select:
+      name: Discord
+      policies:
+      - 全球自动策略
+      - 全球手动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png
+  - select:
+      name: Line
+      policies:
+      - 全球自动策略
+      - 全球手动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Line.png
+  - select:
+      name: PayPal
+      policies:
+      - DIRECT
+      - 全球自动策略
+      - 全球手动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
+  - select:
+      name: Siri
+      policies:
+      - DIRECT
+      - 全球自动策略
+      - 全球手动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Siri.png
+  - select:
+      name: Voice
+      policies:
+      - DIRECT
+      - 全球自动策略
+      - 全球手动策略
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Voice.png
+  - fallback:
+      name: 兜底后备策略
+      policies:
+      - DIRECT
+      - 全球自动策略
+      - 香港时延优选
+      - 台湾时延优选
+      - 日本时延优选
+      - 韩国时延优选
+      - 新国/狮城时延优选
+      - 美国时延优选
+      - 全球手动策略
+      interval: 600
+      tolerance: 150
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+  - select:
+      name: Reddit
+      policies:
+      - 手动选择
+      flatten: false
+      hidden: true
+  - load_balance:
+      name: 喜马拉雅
+      policies:
+      - DIRECT
+      - 手动选择
+      flatten: false
+      hidden: true
+  - select:
+      name: 搜狐
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 前程无忧
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 饿了么
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 苏宁
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 爱企查
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 咪咕
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 乐视
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 滴滴出行
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 什么值得买
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 人人影视
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 豆瓣
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 凤凰网
+      policies:
+      - 手动选择
+      flatten: false
+      hidden: true
+  - select:
+      name: 唯品会
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 钉钉
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 网易云音乐
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: Soul
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: OKX
+      policies:
+      - 手动选择
+      flatten: false
+      hidden: true
+  - select:
+      name: QQ音乐
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 百度贴吧
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 快手
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - load_balance:
+      name: 蓝奏云
+      policies:
+      - DIRECT
+      - 手动选择
+      flatten: false
+      hidden: true
+  - select:
+      name: 优酷
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 微博
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 小红书
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 美图秀秀
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: 搜狗输入法
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: 京东
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: ChinaDNS
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 拼多多
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: 网易
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 谷歌推送
+      policies:
+      - 手动选择
+      icon: ''
+      hidden: true
+  - load_balance:
+      name: 百度
+      policies:
+      - DIRECT
+      - 手动选择
+      flatten: false
+      hidden: true
+  - select:
+      name: iCloud
+      policies:
+      - DIRECT
+      - 手动选择
+      icon: ''
+      hidden: true
+  - select:
+      name: 同程旅行
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 建设银行
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 广发银行
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 交通银行
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 光大银行
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 邮政银行
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 农业银行
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: 招商银行
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: 中国银行
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: 中国联通
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 中国电信
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 高德地图
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 爱奇艺
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - load_balance:
+      name: App Store
+      policies:
+      - DIRECT
+      - 手动选择
+      flatten: false
+      hidden: true
+  - select:
+      name: QQ
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 支付宝
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 美团
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 虎牙
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 携程
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: '115'
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 腾讯视频
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: 币安
+      policies:
+      - 手动选择
+      flatten: false
+      hidden: true
+  - select:
+      name: 抖音
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: Instagram
+      policies:
+      - 手动选择
+      icon: ''
+      hidden: true
+  - load_balance:
+      name: TestFlight
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: WeChat
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: iBL3ND
+      policies:
+      - DIRECT
+      - 手动选择
+      - 新国节点
+      - 香港手动策略
+      - 日本手动策略
+      - 韩国手动策略
+      - 台湾手动策略
+      - 美国手动策略
+      - 马来节点
+      - 泰国节点
+      - 印度节点
+      - 越南节点
+      - 专线节点
+      - AiTk节点
+      - 澳门节点
+      - 菲律宾节点
+      - 印度尼西亚节点
+      - 柬埔寨节点
+      - 不丹节点
+      - 缅甸节点
+      - 老挝节点
+      - 澳大利亚
+      - 尼泊尔节点
+      - 巴基斯坦节点
+      - 孟加拉节点
+      - 斯里兰卡节点
+      - 蒙古节点
+      - 土库曼斯坦节点
+      - 哈萨克斯坦节点
+      - 乌兹别克斯坦节点
+      - 土耳其节点
+      - 塔吉克斯坦节点
+      - 马尔代夫节点
+      - 伊朗节点
+      - 吉尔吉斯斯坦节点
+      - 以色列节点
+      - 阿联酋节点
+      - 沙特阿拉伯节点
+      - 卡塔尔节点
+      - 科威特节点
+      - 阿曼节点
+      - 巴林节点
+      - 约旦节点
+      - 黎巴嫩节点
+      - 叙利亚节点
+      - 伊拉克节点
+      - 阿富汗节点
+      - 也门节点
+      - 马尔代夫节点
+      - 不丹节点
+      - 塔吉克斯坦节点
+      - 土库曼斯坦节点
+      - 吉尔吉斯斯坦节点
+      - 东帝汶节点
+      - 亚美尼亚节点
+      - 阿塞拜疆节点
+      - 格鲁吉亚节点
+      - 阿尔巴尼亚节点
+      - 安道尔节点
+      - 奥地利节点
+      - 白俄罗斯节点
+      - 比利时节点
+      - 波黑节点
+      - 保加利亚节点
+      - 克罗地亚节点
+      - 塞浦路斯节点
+      - 捷克节点
+      - 丹麦节点
+      - 爱沙尼亚节点
+      - 芬兰节点
+      - 法国节点
+      - 德国节点
+      - 希腊节点
+      - 匈牙利节点
+      - 冰岛节点
+      - 爱尔兰节点
+      - 意大利节点
+      - 拉脱维亚节点
+      - 列支敦士登节点
+      - 立陶宛节点
+      - 卢森堡节点
+      - 马耳他节点
+      - 摩尔多瓦节点
+      - 摩纳哥节点
+      - 黑山节点
+      - 荷兰节点
+      - 北马其顿节点
+      - 挪威节点
+      - 波兰节点
+      - 葡萄牙节点
+      - 罗马尼亚节点
+      - 俄罗斯节点
+      - 圣马力诺节点
+      - 塞尔维亚节点
+      - 斯洛伐克节点
+      - 斯洛文尼亚节点
+      - 西班牙节点
+      - 瑞典节点
+      - 瑞士节点
+      - 乌克兰节点
+      - 英国节点
+      - 阿根廷节点
+      - 阿尔及利亚节点
+      - 安哥拉节点
+      - 安提瓜和巴布达节点
+      - 巴巴多斯节点
+      - 巴布亚新几内亚节点
+      - 巴哈马节点
+      - 巴拉圭节点
+      - 贝宁节点
+      - 博茨瓦纳节点
+      - 巴西节点
+      - 布基纳法索节点
+      - 布隆迪节点
+      - 佛得角节点
+      - 喀麦隆节点
+      - 加拿大节点
+      - 中央非洲共和国节点
+      - 乍得节点
+      - 智利节点
+      - 科摩罗节点
+      - 刚果共和国节点
+      - 刚果民主共和国节点
+      - 哥斯达黎加节点
+      - 科特迪瓦节点
+      - 古巴节点
+      - 吉布提节点
+      - 多米尼克节点
+      - 多米尼加共和国节点
+      - 厄瓜多尔节点
+      - 埃及节点
+      - 萨尔瓦多节点
+      - 赤道几内亚节点
+      - 厄立特里亚节点
+      - 埃塞俄比亚节点
+      - 斐济节点
+      - 加蓬节点
+      - 冈比亚节点
+      - 加纳节点
+      - 格林纳达节点
+      - 危地马拉节点
+      - 几内亚节点
+      - 几内亚比绍节点
+      - 圭亚那节点
+      - 海地节点
+      - 洪都拉斯节点
+      - 牙买加节点
+      - 肯尼亚节点
+      - 基里巴斯节点
+      - 科索沃节点
+      - 莱索托节点
+      - 利比里亚节点
+      - 利比亚节点
+      - 马达加斯加节点
+      - 马拉维节点
+      - 马里节点
+      - 毛里塔尼亚节点
+      - 毛里求斯节点
+      - 墨西哥节点
+      - 密克罗尼西亚节点
+      - 莫桑比克节点
+      - 纳米比亚节点
+      - 瑙鲁节点
+      - 新西兰节点
+      - 尼加拉瓜节点
+      - 尼日尔节点
+      - 尼日利亚节点
+      - 朝鲜节点
+      - 巴劳节点
+      - 巴拿马节点
+      - 秘鲁节点
+      - 卢旺达节点
+      - 圣基茨和尼维斯节点
+      - 圣卢西亚节点
+      - 圣文森特和格林纳丁斯节点
+      - 萨摩亚节点
+      - 圣多美和普林西比节点
+      - 塞内加尔节点
+      - 塞舌尔节点
+      - 塞拉利昂节点
+      - 新国节点
+      - 所罗门群岛节点
+      - 索马里节点
+      - 南非节点
+      - 南苏丹节点
+      - 苏丹节点
+      - 苏里南节点
+      - 斯威士兰节点
+      - 坦桑尼亚节点
+      - 多哥节点
+      - 汤加节点
+      - 特立尼达和多巴哥节点
+      - 突尼斯节点
+      - 图瓦卢节点
+      - 乌干达节点
+      - 乌拉圭节点
+      - 瓦努阿图节点
+      - 梵蒂冈城节点
+      - 委内瑞拉节点
+      - 赞比亚节点
+      - 津巴布韦节点
+      flatten: false
+      icon: https://iili.io/K0KrBdQ.png
+      hidden: false
+  - select:
+      name: AiTk节点
+      policies:
+      - 美国手动策略
+      - 韩国手动策略
+      - 日本手动策略
+      - 台湾手动策略
+      - 新国节点
+      flatten: true
+      icon: https://iili.io/KjKWB5v.png
+      hidden: false
+  - auto_test:
+      name: 新国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1EC|新加坡|Singapore|SG"
+      interval: 5
+      tolerance: 0
+      icon: https://iili.io/FaRfFXn.png
+      hidden: true
+  - auto_test:
+      name: 马来节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1FE|马来西亚|马来|Malaysia|MY|Malay"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/FaA7mPV.png
+      hidden: true
+  - auto_test:
+      name: 泰国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1ED|泰国|THA|TH"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/FaA5hmb.png
+      hidden: true
+  - auto_test:
+      name: 印度节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EE\U0001F1F3|印度|India|IND|IN"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/FaARol9.png
+      hidden: true
+  - auto_test:
+      name: 越南节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FB\U0001F1F3|越南|VNM|VN"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/FaTC2yP.png
+      hidden: true
+  - auto_test:
+      name: Gemini
+      policies:
+      - 新国节点
+      - 韩国手动策略
+      - 美国手动策略
+      - 日本手动策略
+      - 台湾手动策略
+      flatten: false
+      interval: 30
+      tolerance: 5
+      hidden: true
+  - auto_test:
+      name: 专线节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: IEPL|IPLC|BGP
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/Twoandz9/Fast.png
+      hidden: true
+  - auto_test:
+      name: 澳门节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1F4|澳门|MAC|MO"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 荷兰节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1F1|荷兰|NLD|NL"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 阿根廷节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1F7|阿根廷|ARG|AR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 阿尔及利亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E9\U0001F1FF|阿尔及利亚|DZA|DZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 安哥拉节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1F4|安哥拉|AGO|AO"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 安提瓜和巴布达节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1EC|安提瓜和巴布达|ATG|AG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴巴多斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1E7|巴巴多斯|BRB|BB"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 纳米比亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1E6|纳米比亚|NAM|NA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 瑙鲁节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1F7|瑙鲁|NRU|NR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 新西兰节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1FF|新西兰|NZL|NZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 尼加拉瓜节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1EE|尼加拉瓜|NIC|NI"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 尼日尔节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1EA|尼日尔|NER|NE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴勒斯坦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1F8|巴勒斯坦|Palestine|PSE|PS"
+      interval: 5
+      tolerance: 0
+      hidden: true
+  - auto_test:
+      name: 尼日利亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1EC|尼日利亚|NGA|NG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 朝鲜节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1F5|朝鲜|PRK|KP"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 澳大利亚
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1FA|澳大利亚|Australia|AUS|AU"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 伯利兹节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1FF|伯利兹|Belize|BZ"
+      interval: 5
+      tolerance: 0
+      hidden: true
+  - auto_test:
+      name: 巴劳节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1FC|巴劳|PLW|PW"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴拿马节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1E6|巴拿马|PAN|PA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 秘鲁节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1EA|秘鲁|PER|PE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 卢旺达节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F7\U0001F1FC|卢旺达|RWA|RW"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 圣基茨和尼维斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1F3|圣基茨和尼维斯|KNA|KN"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 圣卢西亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1E8|圣卢西亚|LCA|LC"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 圣文森特和格林纳丁斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FB\U0001F1E8|圣文森特和格林纳丁斯|VCT|VC"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 萨摩亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FC\U0001F1F8|萨摩亚|WSM|WS"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 圣多美和普林西比节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1F9|圣多美和普林西比|STP|ST"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 塞内加尔节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1F3|塞内加尔|SEN|SN"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 塞舌尔节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1E8|塞舌尔|SYC|SC"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 塞拉利昂节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1F1|塞拉利昂|SLE|SL"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴布亚新几内亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1EC|巴布亚新几内亚|PNG|PG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴哈马节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1F8|巴哈马|BHS|BS"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴拉圭节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1FE|巴拉圭|PRY|PY"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 贝宁节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1EF|贝宁|BEN|BJ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 博茨瓦纳节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1FC|博茨瓦纳|BWA|BW"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴西节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1F7|巴西|BRA|BR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 莱索托节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1F8|莱索托|LSO|LS"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 利比里亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1F7|利比里亚|LBR|LR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 利比亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1FE|利比亚|LBY|LY"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 马达加斯加节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1EC|马达加斯加|MDG|MG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 马拉维节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1FC|马拉维|MWI|MW"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 马里节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1F1|马里|MLI|ML"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 毛里塔尼亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1F7|毛里塔尼亚|MRT|MR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 毛里求斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1FA|毛里求斯|MUS|MU"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 墨西哥节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1FD|墨西哥|MEX|MX"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 密克罗尼西亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EB\U0001F1F2|密克罗尼西亚|FSM|FM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 莫桑比克节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1FF|莫桑比克|MOZ|MZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 布基纳法索节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1EB|布基纳法索|BFA|BF"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 布隆迪节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1EE|布隆迪|BDI|BI"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 佛得角节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1FB|佛得角|CPV|CV"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 喀麦隆节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1F2|喀麦隆|CMR|CM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 加拿大节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1E6|加拿大|CAN|CA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 中央非洲共和国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1EB|中央非洲共和国|CAF|CF"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 乍得节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1E9|乍得|TCD|TD"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 智利节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1F1|智利|CHL|CL"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 科摩罗节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1F2|科摩罗|COM|KM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 刚果共和国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1EC|刚果共和国|COG|CG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 刚果民主共和国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1E9|刚果民主共和国|COD|CD"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 北马其顿节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1F0|北马其顿|MKD|MK"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 哥斯达黎加节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1F7|哥斯达黎加|CRI|CR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 科特迪瓦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1EE|科特迪瓦|CIV|CI"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 古巴节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1FA|古巴|CUB|CU"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 吉布提节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E9\U0001F1EF|吉布提|DJI|DJ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 多米尼克节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E9\U0001F1F2|多米尼克|DMA|DM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 多米尼加共和国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E9\U0001F1F4|多米尼加共和国|DOM|DO"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 厄瓜多尔节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EA\U0001F1E8|厄瓜多尔|ECU|EC"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 埃及节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EA\U0001F1EC|埃及|EGY|EG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 萨尔瓦多节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1FB|萨尔瓦多|SLV|SV"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 赤道几内亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1F6|赤道几内亚|GNQ|GQ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 厄立特里亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EA\U0001F1F7|厄立特里亚|ERI|ER"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 埃塞俄比亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EA\U0001F1F9|埃塞俄比亚|ETH|ET"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 斐济节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EB\U0001F1EF|斐济|FJI|FJ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 加蓬节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1E6|加蓬|GAB|GA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 冈比亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1F2|冈比亚|GMB|GM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 加纳节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1ED|加纳|GHA|GH"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 格林纳达节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1E9|格林纳达|GRD|GD"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 危地马拉节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1F9|危地马拉|GTM|GT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 几内亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1F3|几内亚|GIN|GN"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 几内亚比绍节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1FC|几内亚比绍|GNB|GW"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 圭亚那节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1FE|圭亚那|GUY|GY"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 海地节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1ED\U0001F1F9|海地|HTI|HT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 洪都拉斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1ED\U0001F1F3|洪都拉斯|HND|HN"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 牙买加节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EF\U0001F1F2|牙买加|JAM|JM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 肯尼亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1EA|肯尼亚|KEN|KE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 基里巴斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1EE|基里巴斯|KIR|KI"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 科索沃节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FD\U0001F1F0|科索沃|XKX|XK"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 挪威节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1F4|挪威|NOR|NO"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 波兰节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1F1|波兰|POL|PL"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 葡萄牙节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1F9|葡萄牙|PRT|PT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 罗马尼亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F7\U0001F1F4|罗马尼亚|ROU|RO"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 俄罗斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F7\U0001F1FA|俄罗斯|RUS|RU"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 圣马力诺节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1F2|圣马力诺|SMR|SM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 塞尔维亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F7\U0001F1F8|塞尔维亚|SRB|RS"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 斯洛伐克节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1F0|斯洛伐克|SVK|SK"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 斯洛文尼亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1EE|斯洛文尼亚|SVN|SI"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 西班牙节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EA\U0001F1F8|西班牙|ESP|ES"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 瑞典节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1EA|瑞典|SWE|SE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 瑞士节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1ED|瑞士|CHE|CH"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 乌克兰节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FA\U0001F1E6|乌克兰|UKR|UA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 英国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "^(?!.*剩余流量).*?(?:\U0001F1EC\U0001F1E7|英国|GBR|GB|EN)"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 阿尔巴尼亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1F1|阿尔巴尼亚|ALB|AL"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 安道尔节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1E9|安道尔|AND|AD"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 奥地利节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1F9|奥地利|AUT|AT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 所罗门群岛节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1E7|所罗门群岛|SLB|SB"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 索马里节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1F4|索马里|SOM|SO"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 南非节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FF\U0001F1E6|南非|ZAF|ZA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 南苏丹节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1F8|南苏丹|SSD|SS"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 苏丹节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1E9|苏丹|SDN|SD"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 苏里南节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1F7|苏里南|SUR|SR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 斯威士兰节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1FF|斯威士兰|SWZ|SZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 坦桑尼亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1FF|坦桑尼亚|TZA|TZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 多哥节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1EC|多哥|TGO|TG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 汤加节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1F4|汤加|TON|TO"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 特立尼达和多巴哥节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1F9|特立尼达和多巴哥|TTO|TT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 突尼斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1F3|突尼斯|TUN|TN"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 图瓦卢节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1FB|图瓦卢|TUV|TV"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 乌干达节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FA\U0001F1EC|乌干达|UGA|UG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 乌拉圭节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FA\U0001F1FE|乌拉圭|URY|UY"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 瓦努阿图节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FB\U0001F1FA|瓦努阿图|VUT|VU"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 梵蒂冈城节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FB\U0001F1E6|梵蒂冈|VAT|VA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 委内瑞拉节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FB\U0001F1EA|委内瑞拉|VEN|VE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 赞比亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FF\U0001F1F2|赞比亚|ZMB|ZM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 津巴布韦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FF\U0001F1FC|津巴布韦|ZWE|ZW"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 白俄罗斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1FE|白俄罗斯|BLR|BY"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 比利时节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1EA|比利时|BEL|BE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 波黑节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1E6|波斯尼亚和黑塞哥维那|BIH|BA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 保加利亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1EC|保加利亚|BGR|BG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 克罗地亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1ED\U0001F1F7|克罗地亚|HRV|HR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 塞浦路斯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1FE|塞浦路斯|CYP|CY"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/Kq9uM5Q.png
+      hidden: true
+  - auto_test:
+      name: 捷克节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E8\U0001F1FF|捷克|CZE|CZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 丹麦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E9\U0001F1F0|丹麦|DNK|DK"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 爱沙尼亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EA\U0001F1EA|爱沙尼亚|EST|EE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 芬兰节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EB\U0001F1EE|芬兰|FIN|FI"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 法国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EB\U0001F1F7|法国|FRA|FR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 德国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E9\U0001F1EA|德国|DEU|DE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 希腊节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1F7|希腊|GRC|GR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 匈牙利节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1ED\U0001F1FA|匈牙利|HUN|HU"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 冰岛节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EE\U0001F1F8|冰岛|ISL|IS"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 爱尔兰节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EE\U0001F1EA|爱尔兰|IRL|IE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 意大利节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EE\U0001F1F9|意大利|ITA|IT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 拉脱维亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1FB|拉脱维亚|LVA|LV"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 列支敦士登节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1EE|列支敦士登|LIE|LI"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 立陶宛节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1F9|立陶宛|LTU|LT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 卢森堡节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1FA|卢森堡|LUX|LU"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 马耳他节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1F9|马耳他|MLT|MT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 摩尔多瓦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1E9|摩尔多瓦|MDA|MD"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 摩纳哥节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1E8|摩纳哥|MCO|MC"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 黑山节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1EA|黑山|MNE|ME"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 东帝汶节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1F1|东帝汶|TLS|TL"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: ''
+      hidden: true
+  - auto_test:
+      name: 亚美尼亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1F2|亚美尼亚|ARM|AM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KfpSO1n.png
+      hidden: true
+  - auto_test:
+      name: 阿塞拜疆节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1FF|阿塞拜疆|AZE|AZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KfpQF3B.png
+      hidden: true
+  - auto_test:
+      name: 格鲁吉亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EC\U0001F1EA|格鲁吉亚|GEO|GE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/Kq9G1rN.png
+      hidden: true
+  - auto_test:
+      name: 马尔代夫节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1FB|马尔代夫|MDV|MV"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqdJbEB.png
+      hidden: true
+  - auto_test:
+      name: 不丹节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1F9|不丹|BTN|BT"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/Kfy6Ehv.png
+      hidden: true
+  - auto_test:
+      name: 塔吉克斯坦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1EF|塔吉克斯坦|TJK|TJ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: ''
+      hidden: true
+  - auto_test:
+      name: 土库曼斯坦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1F2|土库曼斯坦|TKM|TM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: ''
+      hidden: true
+  - auto_test:
+      name: 吉尔吉斯斯坦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1EC|吉尔吉斯斯坦|KGZ|KG"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJg1V4.png
+      hidden: true
+  - auto_test:
+      name: 菲律宾节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1ED|菲律宾|PHL|PH"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 印度尼西亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EE\U0001F1E9|印度尼西亚|IDN|ID"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/Kq9rghx.png
+      hidden: true
+  - auto_test:
+      name: 柬埔寨节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1ED|柬埔寨|KHM|KH"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/Kq9dVOx.png
+      hidden: true
+  - auto_test:
+      name: 缅甸节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1F2|缅甸|MMR|MM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 老挝节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1E6|老挝|LAO|LA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJLDj1.png
+      hidden: true
+  - auto_test:
+      name: 尼泊尔节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F3\U0001F1F5|尼泊尔|NPL|NP"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴基斯坦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F5\U0001F1F0|巴基斯坦|PAK|PK"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 孟加拉节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1E9|孟加拉|BGD|BD"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KfyvTla.png
+      hidden: true
+  - auto_test:
+      name: 斯里兰卡节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1F0|斯里兰卡|LKA|LK"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 蒙古节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F2\U0001F1F3|蒙古|MNG|MN"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/Kqdo9Ps.png
+      hidden: true
+  - auto_test:
+      name: 哈萨克斯坦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1FF|哈萨克斯坦|KAZ|KZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJXxne.png
+      hidden: true
+  - auto_test:
+      name: 乌兹别克斯坦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FA\U0001F1FF|乌兹别克斯坦|UZB|UZ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 土耳其节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F9\U0001F1F7|土耳其|TUR|TR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 伊朗节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EE\U0001F1F7|伊朗|IRN|IR"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJqTOX.png
+      hidden: true
+  - auto_test:
+      name: 以色列节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EE\U0001F1F1|以色列|ISR|IL"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJ57LB.png
+      hidden: true
+  - auto_test:
+      name: 阿联酋节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1EA|阿联酋|ARE|AE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 沙特阿拉伯节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1E6|沙特阿拉伯|SAU|SA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 卡塔尔节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F6\U0001F1E6|卡塔尔|QAT|QA"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 科威特节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F0\U0001F1FC|科威特|KWT|KW"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJeUle.png
+      hidden: true
+  - auto_test:
+      name: 阿曼节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F4\U0001F1F2|阿曼|OMN|OM"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - auto_test:
+      name: 巴林节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E7\U0001F1ED|巴林|BHR|BH"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KfyMikF.png
+      hidden: true
+  - auto_test:
+      name: 约旦节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EF\U0001F1F4|约旦|JOR|JO"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJ0pja.png
+      hidden: true
+  - auto_test:
+      name: 黎巴嫩节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F1\U0001F1E7|黎巴嫩|LBN|LB"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJbEs1.png
+      hidden: true
+  - auto_test:
+      name: 叙利亚节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1F8\U0001F1FE|叙利亚|SYR|SY"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: ''
+      hidden: true
+  - auto_test:
+      name: 伊拉克节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1EE\U0001F1F6|伊拉克|IRQ|IQ"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/KqJxHw7.png
+      hidden: true
+  - auto_test:
+      name: 阿富汗节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1E6\U0001F1EB|阿富汗|AFG|AF"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      icon: https://iili.io/Kfpheg2.png
+      hidden: true
+  - auto_test:
+      name: 也门节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: "\U0001F1FE\U0001F1EA|也门|YEM|YE"
+      interval: 5
+      tolerance: 0
+      timeout: 5
+      hidden: true
+  - select:
+      name: 红果短剧
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: missav
+      policies:
+      - iBL3ND
+      flatten: false
+      hidden: true
+  - select:
+      name: xvideos
+      policies:
+      - iBL3ND
+      hidden: true
+  - select:
+      name: Pornhub
+      policies:
+      - iBL3ND
+      hidden: true
+  - select:
+      name: 美颜相机
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: 威锋
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: 酷安
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: Netflix
+      policies:
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - load_balance:
+      name: Edge
+      policies:
+      - DIRECT
+      - iBL3ND
+      flatten: false
+      hidden: true
+  - select:
+      name: YouTube
+      policies:
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - select:
+      name: Telegram
+      policies:
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - select:
+      name: Spotify
+      policies:
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - select:
+      name: X
+      policies:
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - select:
+      name: 微信
+      policies:
+      - DIRECT
+      icon: ''
+      hidden: true
+  - select:
+      name: Speedtest
+      policies:
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - select:
+      name: Apple
+      policies:
+      - DIRECT
+      flatten: false
+      hidden: true
+  - select:
+      name: Google
+      policies:
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - select:
+      name: Microsoft
+      policies:
+      - DIRECT
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - select:
+      name: Substore
+      policies:
+      - iBL3ND
+      icon: ''
+      hidden: true
+  - select:
+      name: 国内直连
+      policies:
+      - DIRECT
+      hidden: true
+  - select:
+      name: Final
+      policies:
+      - iBL3ND
+      flatten: false
+      hidden: true
+  - select:
+      name: 国外网站
+      policies:
+      - 香港手动策略
+      - 美国手动策略
+      - 新国/狮城手动策略
+      - 日本手动策略
+      - 台湾手动策略
+      - 手动选择
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+  - select:
+      name: OpenAI
+      policies:
+      - 香港手动策略
+      - 美国手动策略
+      - 新国/狮城手动策略
+      - 日本手动策略
+      - 台湾手动策略
+      - 手动选择
+      icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
 rules:
-- rule_set:
-    name: AWAvenue-Ads
-    match: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list
-    policy: REJECT
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BlockHttpDNS/BlockHttpDNS.list
-    policy: REJECT
-- rule_set:
-    name: 苹果推送
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/APNs.yaml
-    policy: DIRECT
-- rule_set:
-    match: https://adrules.top/adrules.list
-    policy: REJECT
-- rule_set:
-    name: AI
-    match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list
-    policy: AI
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/OneDrive.yaml
-    policy: 微软服务
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Microsoft.yaml
-    policy: 微软服务
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/YouTube.yaml
-    policy: 谷歌服务
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Google.yaml
-    policy: 谷歌服务
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Telegram.yaml
-    policy: 电报消息
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Twitter.yaml
-    policy: 推特消息
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Game.yaml
-    policy: 游戏平台
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Emby.yaml
-    policy: Emby
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Bahamut.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Disney.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/HBO.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Netflix.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Spotify.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/PrimeVideo.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/TikTok.yaml
-    policy: 国际媒体
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Apple.yaml
-    policy: 苹果服务
-- rule_set:
-    match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Bilibili.yaml
-    policy: 哔哩哔哩
-- rule_set:
-    match: https://ruleset.skk.moe/List/non_ip/sogouinput.conf
-    policy: REJECT
-- rule_set:
-    match: https://whatshub.top/rule/Instagram.list
-    policy: Instagram
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleDrive/GoogleDrive.list
-    policy: Voice
-    disabled: false
-- rule_set:
-    match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list
-    policy: GitHub
-    disabled: false
-- rule_set:
-    match: https://whatshub.top/rule/Line.list
-    policy: Line
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list
-    policy: PayPal
-- rule_set:
-    match: https://whatshub.top/rule/Discord.list
-    policy: Discord
-- rule_set:
-    match: https://whatshub.top/rule/Reddit.list
-    policy: Reddit
-    disabled: false
-- rule_set:
-    name: 谷歌推送
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleFCM/GoogleFCM.list
-    policy: 谷歌推送
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Siri/Siri.list
-    policy: Siri
-- rule_set:
-    match: https://whatshub.top/rule/115.list
-    policy: '115'
-- rule_set:
-    name: 苏宁
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SuNing/SuNing.list
-    policy: 苏宁
-    disabled: false
-- rule_set:
-    name: 乐视
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/LeTV/LeTV.list
-    policy: 乐视
-    disabled: false
-- rule_set:
-    name: 豆瓣
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouBan/DouBan.list
-    policy: 豆瓣
-    disabled: false
-- rule_set:
-    name: 搜狐
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sohu/Sohu.list
-    policy: 搜狐
-    disabled: false
-- rule_set:
-    name: 咪咕
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Migu/Migu.list
-    policy: 咪咕
-    disabled: false
-- rule_set:
-    name: 微信
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
-    policy: WeChat
-    disabled: false
-- rule_set:
-    name: 钉钉
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DingTalk/DingTalk.list
-    policy: 钉钉
-    disabled: false
-- rule_set:
-    name: 携程
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/XieCheng/XieCheng.list
-    policy: 携程
-    disabled: false
-- rule_set:
-    match: https://whatshub.top/rule/Soul.list
-    policy: Soul
-    disabled: false
-- rule_set:
-    name: 快手
-    match: https://whatshub.top/rule/KuaiShou.list
-    policy: 快手
-    disabled: false
-- rule_set:
-    name: 虎牙
-    match: https://whatshub.top/rule/HuYa.list
-    policy: 虎牙
-    disabled: false
-- rule_set:
-    name: 优酷
-    match: https://whatshub.top/rule/Youku.list
-    policy: 优酷
-    disabled: false
-- rule_set:
-    name: 微博
-    match: https://whatshub.top/rule/Weibo.list
-    policy: 微博
-    disabled: false
-- rule_set:
-    name: 抖音
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list
-    policy: 抖音
-    disabled: false
-- rule_set:
-    name: 美团
-    match: https://whatshub.top/rule/MeiTuan.list
-    policy: 美团
-    disabled: false
-- rule_set:
-    name: 京东
-    match: https://whatshub.top/rule/JingDong.list
-    policy: 京东
-    disabled: false
-- rule_set:
-    name: 百度
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Baidu/Baidu.list
-    policy: 百度
-    disabled: false
-- rule_set:
-    name: 网易
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEase/NetEase.list
-    policy: 网易
-    disabled: false
-- rule_set:
-    name: 苹果AI
-    match: https://raw.githubusercontent.com/xxxjacc/LoonRules/main/AppleIntelligence.list
-    policy: 苹果服务
-    disabled: false
-- rule_set:
-    name: Apple
-    match: https://github.com/Blankwonder/surge-list/raw/master/apple.list
-    policy: 苹果服务
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list
-    policy: iCloud
-    disabled: false
-- rule_set:
-    name: 爱企查
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AiQiCha/AiQiCha.list
-    policy: 爱企查
-    disabled: false
-- rule_set:
-    name: 拼多多
-    match: https://whatshub.top/rule/Pinduoduo.list
-    policy: 拼多多
-    disabled: false
-- rule_set:
-    name: 唯品会
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/VipShop/VipShop.list
-    policy: 唯品会
-    disabled: false
-- rule_set:
-    name: 支付宝
-    match: https://whatshub.top/rule/AliPay.list
-    policy: 支付宝
-    disabled: false
-- rule_set:
-    name: 饿了么
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Eleme/Eleme.list
-    policy: 饿了么
-    disabled: false
-- rule_set:
-    name: 凤凰网
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/FengHuangWang/FengHuangWang.list
-    policy: 凤凰网
-    disabled: false
-- rule_set:
-    name: 小红书
-    match: https://whatshub.top/rule/XiaoHongShu.list
-    policy: 小红书
-    disabled: false
-- rule_set:
-    name: 蓝奏云
-    match: https://whatshub.top/rule/LanZouYun.list
-    policy: 蓝奏云
-    disabled: false
-- rule_set:
-    name: 爱奇艺
-    match: https://whatshub.top/rule/iQIYI.list
-    policy: 爱奇艺
-    disabled: false
-- rule_set:
-    name: QQ音乐
-    match: https://whatshub.top/rule/QQMusic.list
-    policy: QQ音乐
-    disabled: false
-- rule_set:
-    name: 滴滴出行
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DiDi/DiDi.list
-    policy: 滴滴出行
-    disabled: false
-- rule_set:
-    name: 百度贴吧
-    match: https://whatshub.top/rule/BaiDuTieBa.list
-    policy: 百度贴吧
-    disabled: false
-- rule_set:
-    name: 美图秀秀
-    match: https://whatshub.top/rule/MeiTu.list
-    policy: 美图秀秀
-    disabled: false
-- rule_set:
-    name: 前程无忧
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/51Job/51Job.list
-    policy: 前程无忧
-    disabled: false
-- rule_set:
-    name: 广发银行
-    match: https://whatshub.top/rule/CGB.list
-    policy: 广发银行
-    disabled: false
-- rule_set:
-    name: 交通银行
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BOCOM/BOCOM.list
-    policy: 交通银行
-    disabled: false
-- rule_set:
-    name: 光大银行
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/CEB/CEB.list
-    policy: 光大银行
-    disabled: false
-- rule_set:
-    name: 建设银行
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/CCB/CCB.list
-    policy: 建设银行
-    disabled: false
-- rule_set:
-    name: 邮政银行
-    match: https://whatshub.top/rule/PSBC.list
-    policy: 邮政银行
-    disabled: false
-- rule_set:
-    name: 招商银行
-    match: https://whatshub.top/rule/CMB.list
-    policy: 招商银行
-    disabled: false
-- rule_set:
-    name: 中国银行
-    match: https://whatshub.top/rule/BOC.list
-    policy: 中国银行
-    disabled: false
-- rule_set:
-    name: 农业银行
-    match: https://whatshub.top/rule/ABC.list
-    policy: 农业银行
-    disabled: false
-- rule_set:
-    name: 同程旅游
-    match: https://whatshub.top/rule/TongCheng.list
-    policy: 同程旅行
-    disabled: false
-- rule_set:
-    name: 中国联通
-    match: https://whatshub.top/rule/ChinaUnicom.list
-    policy: 中国联通
-    disabled: false
-- rule_set:
-    name: 中国电信
-    match: https://whatshub.top/rule/ChinaTelecom.list
-    policy: 中国电信
-    disabled: false
-- rule_set:
-    name: 高德地图
-    match: https://whatshub.top/rule/GaoDe.list
-    policy: 高德地图
-    disabled: false
-- rule_set:
-    name: 人人影视
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YYeTs/YYeTs.list
-    policy: 人人影视
-    disabled: false
-- rule_set:
-    name: 喜马拉雅
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Himalaya/Himalaya.list
-    policy: 喜马拉雅
-    disabled: false
-- rule_set:
-    name: 腾讯视频
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TencentVideo/TencentVideo.list
-    policy: 腾讯视频
-    disabled: false
-- rule_set:
-    match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/TestFlight/TestFlight.list
-    policy: TestFlight
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppStore/AppStore.list
-    policy: App Store
-- rule_set:
-    name: 什么值得买
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SMZDM/SMZDM.list
-    policy: 什么值得买
-    disabled: false
-- rule_set:
-    name: 网易云音乐
-    match: https://whatshub.top/rule/NetEaseMusic.list
-    policy: 网易云音乐
-    disabled: false
-- rule_set:
-    name: 网易云音乐
-    match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEaseMusic/NetEaseMusic.list
-    policy: 网易云音乐
-    disabled: false
-- rule_set:
-    match: 搜狗输入法
-    policy: 搜狗输入法
-- rule_set:
-    match: https://whatshub.top/rule/QQ.list
-    policy: QQ
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    policy: DIRECT
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    policy: DIRECT
-- rule_set:
-    match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
-    policy: DIRECT
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    policy: DIRECT
-    disabled: false
-- rule_set:
-    match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
-    policy: DIRECT
-    disabled: false
-- geoip:
-    match: CN
-    policy: DIRECT
-    no_resolve: true
-    disabled: false
-- default:
-    name: FINAL
-    policy: 兜底后备策略
+  - rule_set:
+      name: AWAvenue-Ads
+      match: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list
+      policy: REJECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BlockHttpDNS/BlockHttpDNS.list
+      policy: REJECT
+  - rule_set:
+      name: 苹果推送
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/APNs.yaml
+      policy: DIRECT
+  - rule_set:
+      match: https://adrules.top/adrules.list
+      policy: REJECT
+  - rule_set:
+      name: AI
+      match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list
+      policy: AI
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/OneDrive.yaml
+      policy: 微软服务
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Microsoft.yaml
+      policy: 微软服务
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/YouTube.yaml
+      policy: 谷歌服务
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Google.yaml
+      policy: 谷歌服务
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Telegram.yaml
+      policy: 电报消息
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Twitter.yaml
+      policy: 推特消息
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Game.yaml
+      policy: 游戏平台
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Emby.yaml
+      policy: Emby
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Bahamut.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Disney.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/HBO.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Netflix.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Spotify.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/PrimeVideo.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/TikTok.yaml
+      policy: 国际媒体
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Apple.yaml
+      policy: 苹果服务
+  - rule_set:
+      match: https://github.com/Repcz/Tool/raw/X/Egern/Rules/Bilibili.yaml
+      policy: 哔哩哔哩
+  - rule_set:
+      match: https://ruleset.skk.moe/List/non_ip/sogouinput.conf
+      policy: REJECT
+  - rule_set:
+      match: https://whatshub.top/rule/Instagram.list
+      policy: Instagram
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleDrive/GoogleDrive.list
+      policy: Voice
+      disabled: false
+  - rule_set:
+      match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list
+      policy: GitHub
+      disabled: false
+  - rule_set:
+      match: https://whatshub.top/rule/Line.list
+      policy: Line
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list
+      policy: PayPal
+  - rule_set:
+      match: https://whatshub.top/rule/Discord.list
+      policy: Discord
+  - rule_set:
+      match: https://whatshub.top/rule/Reddit.list
+      policy: Reddit
+      disabled: false
+  - rule_set:
+      name: 谷歌推送
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleFCM/GoogleFCM.list
+      policy: 谷歌推送
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Siri/Siri.list
+      policy: Siri
+  - rule_set:
+      match: https://whatshub.top/rule/115.list
+      policy: '115'
+  - rule_set:
+      name: 苏宁
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SuNing/SuNing.list
+      policy: 苏宁
+      disabled: false
+  - rule_set:
+      name: 乐视
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/LeTV/LeTV.list
+      policy: 乐视
+      disabled: false
+  - rule_set:
+      name: 豆瓣
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouBan/DouBan.list
+      policy: 豆瓣
+      disabled: false
+  - rule_set:
+      name: 搜狐
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sohu/Sohu.list
+      policy: 搜狐
+      disabled: false
+  - rule_set:
+      name: 咪咕
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Migu/Migu.list
+      policy: 咪咕
+      disabled: false
+  - rule_set:
+      name: 微信
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
+      policy: WeChat
+      disabled: false
+  - rule_set:
+      name: 钉钉
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DingTalk/DingTalk.list
+      policy: 钉钉
+      disabled: false
+  - rule_set:
+      name: 携程
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/XieCheng/XieCheng.list
+      policy: 携程
+      disabled: false
+  - rule_set:
+      match: https://whatshub.top/rule/Soul.list
+      policy: Soul
+      disabled: false
+  - rule_set:
+      name: 快手
+      match: https://whatshub.top/rule/KuaiShou.list
+      policy: 快手
+      disabled: false
+  - rule_set:
+      name: 虎牙
+      match: https://whatshub.top/rule/HuYa.list
+      policy: 虎牙
+      disabled: false
+  - rule_set:
+      name: 优酷
+      match: https://whatshub.top/rule/Youku.list
+      policy: 优酷
+      disabled: false
+  - rule_set:
+      name: 微博
+      match: https://whatshub.top/rule/Weibo.list
+      policy: 微博
+      disabled: false
+  - rule_set:
+      name: 抖音
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list
+      policy: 抖音
+      disabled: false
+  - rule_set:
+      name: 美团
+      match: https://whatshub.top/rule/MeiTuan.list
+      policy: 美团
+      disabled: false
+  - rule_set:
+      name: 京东
+      match: https://whatshub.top/rule/JingDong.list
+      policy: 京东
+      disabled: false
+  - rule_set:
+      name: 百度
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Baidu/Baidu.list
+      policy: 百度
+      disabled: false
+  - rule_set:
+      name: 网易
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEase/NetEase.list
+      policy: 网易
+      disabled: false
+  - rule_set:
+      name: 苹果AI
+      match: https://raw.githubusercontent.com/xxxjacc/LoonRules/main/AppleIntelligence.list
+      policy: 苹果服务
+      disabled: false
+  - rule_set:
+      name: Apple
+      match: https://github.com/Blankwonder/surge-list/raw/master/apple.list
+      policy: 苹果服务
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list
+      policy: iCloud
+      disabled: false
+  - rule_set:
+      name: 爱企查
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AiQiCha/AiQiCha.list
+      policy: 爱企查
+      disabled: false
+  - rule_set:
+      name: 拼多多
+      match: https://whatshub.top/rule/Pinduoduo.list
+      policy: 拼多多
+      disabled: false
+  - rule_set:
+      name: 唯品会
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/VipShop/VipShop.list
+      policy: 唯品会
+      disabled: false
+  - rule_set:
+      name: 支付宝
+      match: https://whatshub.top/rule/AliPay.list
+      policy: 支付宝
+      disabled: false
+  - rule_set:
+      name: 饿了么
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Eleme/Eleme.list
+      policy: 饿了么
+      disabled: false
+  - rule_set:
+      name: 凤凰网
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/FengHuangWang/FengHuangWang.list
+      policy: 凤凰网
+      disabled: false
+  - rule_set:
+      name: 小红书
+      match: https://whatshub.top/rule/XiaoHongShu.list
+      policy: 小红书
+      disabled: false
+  - rule_set:
+      name: 蓝奏云
+      match: https://whatshub.top/rule/LanZouYun.list
+      policy: 蓝奏云
+      disabled: false
+  - rule_set:
+      name: 爱奇艺
+      match: https://whatshub.top/rule/iQIYI.list
+      policy: 爱奇艺
+      disabled: false
+  - rule_set:
+      name: QQ音乐
+      match: https://whatshub.top/rule/QQMusic.list
+      policy: QQ音乐
+      disabled: false
+  - rule_set:
+      name: 滴滴出行
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DiDi/DiDi.list
+      policy: 滴滴出行
+      disabled: false
+  - rule_set:
+      name: 百度贴吧
+      match: https://whatshub.top/rule/BaiDuTieBa.list
+      policy: 百度贴吧
+      disabled: false
+  - rule_set:
+      name: 美图秀秀
+      match: https://whatshub.top/rule/MeiTu.list
+      policy: 美图秀秀
+      disabled: false
+  - rule_set:
+      name: 前程无忧
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/51Job/51Job.list
+      policy: 前程无忧
+      disabled: false
+  - rule_set:
+      name: 广发银行
+      match: https://whatshub.top/rule/CGB.list
+      policy: 广发银行
+      disabled: false
+  - rule_set:
+      name: 交通银行
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BOCOM/BOCOM.list
+      policy: 交通银行
+      disabled: false
+  - rule_set:
+      name: 光大银行
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/CEB/CEB.list
+      policy: 光大银行
+      disabled: false
+  - rule_set:
+      name: 建设银行
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/CCB/CCB.list
+      policy: 建设银行
+      disabled: false
+  - rule_set:
+      name: 邮政银行
+      match: https://whatshub.top/rule/PSBC.list
+      policy: 邮政银行
+      disabled: false
+  - rule_set:
+      name: 招商银行
+      match: https://whatshub.top/rule/CMB.list
+      policy: 招商银行
+      disabled: false
+  - rule_set:
+      name: 中国银行
+      match: https://whatshub.top/rule/BOC.list
+      policy: 中国银行
+      disabled: false
+  - rule_set:
+      name: 农业银行
+      match: https://whatshub.top/rule/ABC.list
+      policy: 农业银行
+      disabled: false
+  - rule_set:
+      name: 同程旅游
+      match: https://whatshub.top/rule/TongCheng.list
+      policy: 同程旅行
+      disabled: false
+  - rule_set:
+      name: 中国联通
+      match: https://whatshub.top/rule/ChinaUnicom.list
+      policy: 中国联通
+      disabled: false
+  - rule_set:
+      name: 中国电信
+      match: https://whatshub.top/rule/ChinaTelecom.list
+      policy: 中国电信
+      disabled: false
+  - rule_set:
+      name: 高德地图
+      match: https://whatshub.top/rule/GaoDe.list
+      policy: 高德地图
+      disabled: false
+  - rule_set:
+      name: 人人影视
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YYeTs/YYeTs.list
+      policy: 人人影视
+      disabled: false
+  - rule_set:
+      name: 喜马拉雅
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Himalaya/Himalaya.list
+      policy: 喜马拉雅
+      disabled: false
+  - rule_set:
+      name: 腾讯视频
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TencentVideo/TencentVideo.list
+      policy: 腾讯视频
+      disabled: false
+  - rule_set:
+      match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/TestFlight/TestFlight.list
+      policy: TestFlight
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppStore/AppStore.list
+      policy: App Store
+  - rule_set:
+      name: 什么值得买
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SMZDM/SMZDM.list
+      policy: 什么值得买
+      disabled: false
+  - rule_set:
+      name: 网易云音乐
+      match: https://whatshub.top/rule/NetEaseMusic.list
+      policy: 网易云音乐
+      disabled: false
+  - rule_set:
+      name: 网易云音乐
+      match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEaseMusic/NetEaseMusic.list
+      policy: 网易云音乐
+      disabled: false
+  - rule_set:
+      match: 搜狗输入法
+      policy: 搜狗输入法
+  - rule_set:
+      match: https://whatshub.top/rule/QQ.list
+      policy: QQ
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+      policy: DIRECT
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+      policy: DIRECT
+  - rule_set:
+      match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+      policy: DIRECT
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+      policy: DIRECT
+      disabled: false
+  - rule_set:
+      match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
+      policy: DIRECT
+      disabled: false
+  - geoip:
+      match: CN
+      policy: DIRECT
+      no_resolve: true
+      disabled: false
+  - default:
+      name: FINAL
+      policy: 兜底后备策略
 modules:
 - url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.sgmodule
   enabled: true
