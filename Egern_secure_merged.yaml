@@ -3077,16 +3077,20 @@ rules:
     policy: REJECT
 - rule_set:
     match: https://whatshub.top/rule/Instagram.list
-    policy: 国际媒体
+    policy: Instagram
+    disabled: false
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleDrive/GoogleDrive.list
     policy: Voice
+    disabled: false
 - rule_set:
     match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list
     policy: GitHub
+    disabled: false
 - rule_set:
     match: https://whatshub.top/rule/Line.list
     policy: Line
+    disabled: false
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list
     policy: PayPal
@@ -3095,62 +3099,323 @@ rules:
     policy: Discord
 - rule_set:
     match: https://whatshub.top/rule/Reddit.list
-    policy: 国际媒体
+    policy: Reddit
+    disabled: false
 - rule_set:
     name: 谷歌推送
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GoogleFCM/GoogleFCM.list
-    policy: 谷歌服务
+    policy: 谷歌推送
+    disabled: false
 - rule_set:
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Siri/Siri.list
     policy: Siri
 - rule_set:
     match: https://whatshub.top/rule/115.list
-    policy: DIRECT
+    policy: '115'
 - rule_set:
     name: 苏宁
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SuNing/SuNing.list
-    policy: DIRECT
+    policy: 苏宁
+    disabled: false
 - rule_set:
     name: 乐视
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/LeTV/LeTV.list
-    policy: DIRECT
+    policy: 乐视
+    disabled: false
 - rule_set:
     name: 豆瓣
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouBan/DouBan.list
-    policy: DIRECT
+    policy: 豆瓣
+    disabled: false
 - rule_set:
     name: 搜狐
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sohu/Sohu.list
-    policy: DIRECT
+    policy: 搜狐
+    disabled: false
 - rule_set:
     name: 咪咕
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Migu/Migu.list
-    policy: DIRECT
+    policy: 咪咕
+    disabled: false
 - rule_set:
     name: 微信
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
-    policy: DIRECT
+    policy: WeChat
+    disabled: false
 - rule_set:
     name: 钉钉
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DingTalk/DingTalk.list
-    policy: DIRECT
+    policy: 钉钉
+    disabled: false
 - rule_set:
     name: 携程
     match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/XieCheng/XieCheng.list
+    policy: 携程
+    disabled: false
+- rule_set:
+    match: https://whatshub.top/rule/Soul.list
+    policy: Soul
+    disabled: false
+- rule_set:
+    name: 快手
+    match: https://whatshub.top/rule/KuaiShou.list
+    policy: 快手
+    disabled: false
+- rule_set:
+    name: 虎牙
+    match: https://whatshub.top/rule/HuYa.list
+    policy: 虎牙
+    disabled: false
+- rule_set:
+    name: 优酷
+    match: https://whatshub.top/rule/Youku.list
+    policy: 优酷
+    disabled: false
+- rule_set:
+    name: 微博
+    match: https://whatshub.top/rule/Weibo.list
+    policy: 微博
+    disabled: false
+- rule_set:
+    name: 抖音
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DouYin/DouYin.list
+    policy: 抖音
+    disabled: false
+- rule_set:
+    name: 美团
+    match: https://whatshub.top/rule/MeiTuan.list
+    policy: 美团
+    disabled: false
+- rule_set:
+    name: 京东
+    match: https://whatshub.top/rule/JingDong.list
+    policy: 京东
+    disabled: false
+- rule_set:
+    name: 百度
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Baidu/Baidu.list
+    policy: 百度
+    disabled: false
+- rule_set:
+    name: 网易
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEase/NetEase.list
+    policy: 网易
+    disabled: false
+- rule_set:
+    name: 苹果AI
+    match: https://raw.githubusercontent.com/xxxjacc/LoonRules/main/AppleIntelligence.list
+    policy: 苹果服务
+    disabled: false
+- rule_set:
+    name: Apple
+    match: https://github.com/Blankwonder/surge-list/raw/master/apple.list
+    policy: 苹果服务
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/iCloud/iCloud.list
+    policy: iCloud
+    disabled: false
+- rule_set:
+    name: 爱企查
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AiQiCha/AiQiCha.list
+    policy: 爱企查
+    disabled: false
+- rule_set:
+    name: 拼多多
+    match: https://whatshub.top/rule/Pinduoduo.list
+    policy: 拼多多
+    disabled: false
+- rule_set:
+    name: 唯品会
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/VipShop/VipShop.list
+    policy: 唯品会
+    disabled: false
+- rule_set:
+    name: 支付宝
+    match: https://whatshub.top/rule/AliPay.list
+    policy: 支付宝
+    disabled: false
+- rule_set:
+    name: 饿了么
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Eleme/Eleme.list
+    policy: 饿了么
+    disabled: false
+- rule_set:
+    name: 凤凰网
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/FengHuangWang/FengHuangWang.list
+    policy: 凤凰网
+    disabled: false
+- rule_set:
+    name: 小红书
+    match: https://whatshub.top/rule/XiaoHongShu.list
+    policy: 小红书
+    disabled: false
+- rule_set:
+    name: 蓝奏云
+    match: https://whatshub.top/rule/LanZouYun.list
+    policy: 蓝奏云
+    disabled: false
+- rule_set:
+    name: 爱奇艺
+    match: https://whatshub.top/rule/iQIYI.list
+    policy: 爱奇艺
+    disabled: false
+- rule_set:
+    name: QQ音乐
+    match: https://whatshub.top/rule/QQMusic.list
+    policy: QQ音乐
+    disabled: false
+- rule_set:
+    name: 滴滴出行
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DiDi/DiDi.list
+    policy: 滴滴出行
+    disabled: false
+- rule_set:
+    name: 百度贴吧
+    match: https://whatshub.top/rule/BaiDuTieBa.list
+    policy: 百度贴吧
+    disabled: false
+- rule_set:
+    name: 美图秀秀
+    match: https://whatshub.top/rule/MeiTu.list
+    policy: 美图秀秀
+    disabled: false
+- rule_set:
+    name: 前程无忧
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/51Job/51Job.list
+    policy: 前程无忧
+    disabled: false
+- rule_set:
+    name: 广发银行
+    match: https://whatshub.top/rule/CGB.list
+    policy: 广发银行
+    disabled: false
+- rule_set:
+    name: 交通银行
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BOCOM/BOCOM.list
+    policy: 交通银行
+    disabled: false
+- rule_set:
+    name: 光大银行
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/CEB/CEB.list
+    policy: 光大银行
+    disabled: false
+- rule_set:
+    name: 建设银行
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/CCB/CCB.list
+    policy: 建设银行
+    disabled: false
+- rule_set:
+    name: 邮政银行
+    match: https://whatshub.top/rule/PSBC.list
+    policy: 邮政银行
+    disabled: false
+- rule_set:
+    name: 招商银行
+    match: https://whatshub.top/rule/CMB.list
+    policy: 招商银行
+    disabled: false
+- rule_set:
+    name: 中国银行
+    match: https://whatshub.top/rule/BOC.list
+    policy: 中国银行
+    disabled: false
+- rule_set:
+    name: 农业银行
+    match: https://whatshub.top/rule/ABC.list
+    policy: 农业银行
+    disabled: false
+- rule_set:
+    name: 同程旅游
+    match: https://whatshub.top/rule/TongCheng.list
+    policy: 同程旅行
+    disabled: false
+- rule_set:
+    name: 中国联通
+    match: https://whatshub.top/rule/ChinaUnicom.list
+    policy: 中国联通
+    disabled: false
+- rule_set:
+    name: 中国电信
+    match: https://whatshub.top/rule/ChinaTelecom.list
+    policy: 中国电信
+    disabled: false
+- rule_set:
+    name: 高德地图
+    match: https://whatshub.top/rule/GaoDe.list
+    policy: 高德地图
+    disabled: false
+- rule_set:
+    name: 人人影视
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YYeTs/YYeTs.list
+    policy: 人人影视
+    disabled: false
+- rule_set:
+    name: 喜马拉雅
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Himalaya/Himalaya.list
+    policy: 喜马拉雅
+    disabled: false
+- rule_set:
+    name: 腾讯视频
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TencentVideo/TencentVideo.list
+    policy: 腾讯视频
+    disabled: false
+- rule_set:
+    match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/TestFlight/TestFlight.list
+    policy: TestFlight
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppStore/AppStore.list
+    policy: App Store
+- rule_set:
+    name: 什么值得买
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SMZDM/SMZDM.list
+    policy: 什么值得买
+    disabled: false
+- rule_set:
+    name: 网易云音乐
+    match: https://whatshub.top/rule/NetEaseMusic.list
+    policy: 网易云音乐
+    disabled: false
+- rule_set:
+    name: 网易云音乐
+    match: https://raw.gitmirror.com/blackmatrix7/ios_rule_script/master/rule/Surge/NetEaseMusic/NetEaseMusic.list
+    policy: 网易云音乐
+    disabled: false
+- rule_set:
+    match: 搜狗输入法
+    policy: 搜狗输入法
+- rule_set:
+    match: https://whatshub.top/rule/QQ.list
+    policy: QQ
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
     policy: DIRECT
+- rule_set:
+    match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    policy: DIRECT
+    disabled: false
 - rule_set:
     match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
     policy: DIRECT
 - rule_set:
     match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
     policy: DIRECT
+    disabled: false
+- rule_set:
+    match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    policy: DIRECT
+    disabled: false
 - rule_set:
     match: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list
     policy: DIRECT
+    disabled: false
 - geoip:
     match: CN
     policy: DIRECT
     no_resolve: true
+    disabled: false
 - default:
     name: FINAL
     policy: 兜底后备策略
