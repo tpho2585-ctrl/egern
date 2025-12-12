@@ -18,11 +18,11 @@
 [rewrite_local]
   
 # > Nicegram☆解锁会员权限（2024-02-24）@ddgksf2013
-^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/NicegramProCrack.js
+^https?:\/\/swiftgram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|user\/info|telegram\/auth) url script-response-body https://github.com/ddgksf2013/MoYu/raw/master/NicegramProCrack.js
 
 [mitm] 
 
-hostname=nicegram.cloud
+hostname=swiftgram.cloud
 
 ***********************************/
 
