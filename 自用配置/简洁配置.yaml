@@ -1,0 +1,426 @@
+  # Egern 优化配置 v2.0
+  # 优化时间: 2026-01-11
+  
+  # ========== 基础设置 ==========
+  ipv6: false
+  vif_only: true
+  hide_vpn_icon: true
+  compat_route: false
+  
+  hijack_dns:
+  - '*:53'
+  
+  # ========== 数据库配置 ==========
+  geoip_db_url: https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb
+  asn_db_url: https://cdn.jsdelivr.net/gh/P3TERX/GeoLite.mmdb@download/GeoLite2-ASN.mmdb
+  
+  # ========== 测速配置 ==========
+  proxy_latency_test_url: http://cp.cloudflare.com/generate_204
+  direct_latency_test_url: http://connect.rom.miui.com/generate_204
+  
+  # ========== 路由排除 ==========
+  vif_excluded_routes:
+  - 192.168.0.0/16
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  
+  # ========== DNS 配置 ==========
+  dns:
+    bootstrap:
+    - 223.5.5.5
+    - 119.29.29.29
+    
+    upstreams:
+      Local:
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+      - quic://dns.alidns.com:853
+      
+      Remote:
+      - https://dns.cloudflare.com/dns-query
+      - https://1.1.1.1/dns-query
+      - quic://dns.cloudflare.com:784
+    
+    forward:
+    # 规则集分流
+    - proxy_rule_set:
+        match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaMax/ChinaMax_Domain.list
+        value: Local
+    
+    - proxy_rule_set:
+        match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Apple/Apple_All_No_Resolve.list
+        value: Local
+    
+    # 局域网域名
+    - wildcard:
+        match: '*.lan'
+        value: system
+    - wildcard:
+        match: '*.local'
+        value: system
+    - wildcard:
+        match: '*.localhost'
+        value: system
+    
+    # 中国域名
+    - wildcard:
+        match: '*.cn'
+        value: Local
+    - wildcard:
+        match: '*.中国'
+        value: Local
+    
+    # 主要国内公司（简化版）
+    - wildcard:
+        match: '*bytedance*'
+        value: Local
+    - wildcard:
+        match: '*tencent*'
+        value: Local
+    - wildcard:
+        match: '*alibaba*'
+        value: Local
+    - wildcard:
+        match: '*baidu*'
+        value: Local
+    
+    # 兜底规则
+    - wildcard:
+        match: '*'
+        value: Remote
+    
+    hosts:
+      doh.pub:
+      - 1.12.12.12
+      - 120.53.53.53
+      dns.alidns.com:
+      - 223.5.5.5
+      - 223.6.6.6
+      dns.google:
+      - 8.8.8.8
+      - 8.8.4.4
+      dns.cloudflare.com:
+      - 1.1.1.1
+      - 1.0.0.1
+    
+    block_ips:
+    - 0.0.0.0
+    - 127.0.0.1
+    
+    public_ip_lookup_url: http://ifconfig.me/ip
+  
+  # ========== 策略组 ==========
+  policy_groups:
+  # 手动选择
+  - external:
+      name: 手动选择
+      type: select
+      urls:
+      - https://em.mesl.cloud/ems/get?token=61ba075286933f785d85d93c7c4a2dad
+      icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/06jichang/hanbingyun.png
+  
+  # 自动选择（优化测速参数）
+  - auto_test:
+      name: 自动选择
+      policies:
+      - 手动选择
+      flatten: true
+      filter: (?i)^(?!.*(回国|校园|游戏|过期|剩余)).*$
+      interval: 300
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+  
+  # 功能策略组
+  - select:
+      name: 国际媒体
+      policies:
+      - 自动选择
+      - 香港节点
+      - 美国节点
+      - 狮城节点
+      - 日本节点
+      - 台湾节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+  
+  - select:
+      name: AI 服务
+      policies:
+      - 美国节点
+      - 日本节点
+      - 狮城节点
+      - 香港节点
+      icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+  
+  - select:
+      name: 微软服务
+      policies:
+      - DIRECT
+      - 自动选择
+      - 香港节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+  
+  - select:
+      name: 谷歌服务
+      policies:
+      - 自动选择
+      - 香港节点
+      - 美国节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+  
+  - select:
+      name: 电报消息
+      policies:
+      - 自动选择
+      - 香港节点
+      - 狮城节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+  
+  - select:
+      name: 游戏平台
+      policies:
+      - DIRECT
+      - 自动选择
+      - 香港节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+  
+  - select:
+      name: Emby
+      policies:
+      - 香港节点
+      - 美国节点
+      - 狮城节点
+      - DIRECT
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+  
+  - select:
+      name: 兜底分流
+      policies:
+      - 自动选择
+      - DIRECT
+      - 香港节点
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+  
+  # 地区节点（优化测速参数）
+  - auto_test:
+      name: 香港节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: (?i)🇭🇰|香港|HK|Hong
+      interval: 300
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+  
+  - auto_test:
+      name: 美国节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: (?i)🇺🇸|美国|US|United States
+      interval: 300
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+  
+  - auto_test:
+      name: 狮城节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: (?i)🇸🇬|新加坡|SG|Singapore
+      interval: 300
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+  
+  - auto_test:
+      name: 日本节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: (?i)🇯🇵|日本|JP|Japan
+      interval: 300
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+  
+  - auto_test:
+      name: 台湾节点
+      policies:
+      - 手动选择
+      flatten: true
+      filter: (?i)🇹🇼|台湾|TW|Taiwan
+      interval: 300
+      tolerance: 50
+      icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+  
+  # ========== 分流规则 ==========
+  rules:
+  # 1. 基础网络规则
+  - rule_set:
+      name: 局域网
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Lan/Lan.list
+      policy: DIRECT
+  
+  - protocol:
+      match: QUIC
+      policy: REJECT
+  
+  - protocol:
+      match: NTP
+      policy: DIRECT
+  
+  # 2. 安全与隐私
+  - rule_set:
+      name: 屏蔽HTTP DNS
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/BlockHttpDNS/BlockHttpDNS.list
+      policy: REJECT
+  
+  - rule_set:
+      name: 广告拦截
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Advertising/Advertising_All.list
+      policy: REJECT
+  
+  - rule_set:
+      name: AWAvenue广告规则
+      match: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list
+      policy: REJECT
+  
+  # 3. AI 服务
+  - rule_set:
+      name: OpenAI
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/OpenAI/OpenAI.list
+      policy: AI 服务
+  
+  - rule_set:
+      name: Gemini
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Gemini/Gemini.list
+      policy: AI 服务
+  
+  - rule_set:
+      name: Claude
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Claude/Claude.list
+      policy: AI 服务
+  
+  # 4. 国际服务
+  - rule_set:
+      name: 微软
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Microsoft/Microsoft.list
+      policy: 微软服务
+  
+  - rule_set:
+      name: 谷歌
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Google/Google.list
+      policy: 谷歌服务
+  
+  - rule_set:
+      name: Telegram
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Telegram/Telegram.list
+      policy: 电报消息
+  
+  - rule_set:
+      name: 游戏
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Game/Game.list
+      policy: 游戏平台
+  
+  # 5. 流媒体
+  - rule_set:
+      name: Emby
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Emby/Emby.list
+      policy: Emby
+  
+  - rule_set:
+      name: Netflix
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Netflix/Netflix.list
+      policy: 国际媒体
+  
+  - rule_set:
+      name: YouTube
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/YouTube/YouTube.list
+      policy: 国际媒体
+  
+  # 6. 苹果服务
+  - rule_set:
+      name: TestFlight
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/TestFlight/TestFlight.list
+      policy: DIRECT
+  
+  - rule_set:
+      name: AppStore
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/AppStore/AppStore.list
+      policy: DIRECT
+  
+  - rule_set:
+      name: iCloud
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/iCloud/iCloud.list
+      policy: DIRECT
+  
+  # 7. 国内服务（合并简化）
+  - rule_set:
+      name: 下载服务
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Download/Download.list
+      policy: DIRECT
+  
+  - rule_set:
+      name: 中国大陆
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaMax/ChinaMax.list
+      policy: DIRECT
+  
+  # 8. 地理位置规则
+  - geoip:
+      match: CN
+      policy: DIRECT
+  
+  # 9. 兜底规则
+  - default:
+      policy: 兜底分流
+  
+  # ========== URL 重写 ==========
+  url_rewrites:
+  - match: ^https?://(.*?L[.])?(?:glgoogle).cn
+    location: https://$1google.com
+    status_code: 302
+  
+  # ========== MITM ==========
+  mitm:
+    enabled: true
+    ca_p12: egern.p12
+    ca_passphrase: egern
+  
+  # ========== 模块配置（精简版）==========
+  modules:
+  # 核心功能模块
+  - name: Sub-Store
+    url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/⭐️%20Sub-Store.official.sgmodule
+    enabled: true
+  
+  - name: BoxJs
+    url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/⭐️%20BoxJs.official.sgmodule
+    enabled: true
+  
+  # 增强功能
+  - name: B站增强
+    url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/🍟%20BiliEnhanced.official.sgmodule
+    enabled: true
+  
+  - name: YouTube去广告
+    url: https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule
+    enabled: true
+  
+  # 去广告模块（合并）
+  - name: 综合去广告
+    url: https://limbopro.com/Adblock4limbo.sgmodule
+    enabled: true
+  
+  # 工具模块
+  - name: 流媒体解锁检测
+    url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/流媒体解锁检测.official.sgmodule
+    enabled: true
+  
+  - name: 节点测速
+    url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/节点测速.official.sgmodule
+    enabled: true
+  
+  # 订阅信息
+  - url: https://raw.githubusercontent.com/ByteValley/NetTool/main/Surge/Module/Dashboard/SubscribeInfo.module
+    compat_arguments:
+      Title1: Mesl
+      URL1: https://em.mesl.cloud/ems/get?token=61ba075286933f785d85d93c7c4a2dad
+    enabled: true
