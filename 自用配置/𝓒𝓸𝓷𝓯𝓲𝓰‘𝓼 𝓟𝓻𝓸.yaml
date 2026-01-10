@@ -1,0 +1,1078 @@
+ipv6: false
+vif_only: true
+hide_vpn_icon: true
+hijack_dns:
+- '*:53'
+geoip_db_url: https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/Country.mmdb
+asn_db_url: https://cdn.jsdelivr.net/gh/P3TERX/GeoLite.mmdb@download/GeoLite2-ASN.mmdb
+proxy_latency_test_url: http://cp.cloudflare.com/generate_204
+direct_latency_test_url: http://connect.rom.miui.com/generate_204
+compat_route: false
+vif_excluded_routes:
+- 192.168.0.0/16
+- 10.0.0.0/8
+- 172.16.0.0/12
+dns:
+  bootstrap:
+  - 223.5.5.5
+  - 119.29.29.29
+  - 223.6.6.6
+  - 1.12.12.12
+  - 180.76.76.76
+  upstreams:
+    Local:
+    - quic://223.5.5.5:853
+    - quic://223.6.6.6:853
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - tls://1.12.12.12:853
+    - tls://120.53.53.53:853
+    Remote:
+    - quic://dns.cloudflare.com:784
+    - quic://dns.quad9.net:784
+    - https://dns.cloudflare.com/dns-query
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+  forward:
+  - proxy_rule_set:
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaMax/ChinaMax_Domain.list
+      value: Local
+  - proxy_rule_set:
+      match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Apple/Apple_All_No_Resolve.list
+      value: Local
+  - wildcard:
+      match: '*.lan'
+      value: system
+  - wildcard:
+      match: '*.local'
+      value: system
+  - wildcard:
+      match: '*.localhost'
+      value: system
+  - wildcard:
+      match: '*.home.arpa'
+      value: system
+  - wildcard:
+      match: '*.in-addr.arpa'
+      value: system
+  - wildcard:
+      match: '*.ip6.arpa'
+      value: system
+  - wildcard:
+      match: '*.cn'
+      value: Local
+  - wildcard:
+      match: '*.中国'
+      value: Local
+  - wildcard:
+      match: '*.公司'
+      value: Local
+  - wildcard:
+      match: '*.网络'
+      value: Local
+  - wildcard:
+      match: '*bytedance*'
+      value: Local
+  - wildcard:
+      match: '*bytecdn*'
+      value: Local
+  - wildcard:
+      match: '*bytetos*'
+      value: Local
+  - wildcard:
+      match: '*byteimg*'
+      value: Local
+  - wildcard:
+      match: '*byted*'
+      value: Local
+  - wildcard:
+      match: '*douyin*'
+      value: Local
+  - wildcard:
+      match: '*toutiao*'
+      value: Local
+  - wildcard:
+      match: '*snssdk*'
+      value: Local
+  - wildcard:
+      match: '*pstatp*'
+      value: Local
+  - wildcard:
+      match: '*ixigua*'
+      value: Local
+  - wildcard:
+      match: '*volccdn*'
+      value: Local
+  - wildcard:
+      match: '*volces*'
+      value: Local
+  - wildcard:
+      match: '*volcengine*'
+      value: Local
+  - wildcard:
+      match: '*feishu*'
+      value: Local
+  - wildcard:
+      match: '*huoshan*'
+      value: Local
+  - wildcard:
+      match: '*zjcdn*'
+      value: Local
+  - wildcard:
+      match: '*zijie*'
+      value: Local
+  - wildcard:
+      match: '*amemv*'
+      value: Local
+  - wildcard:
+      match: '*iesdouyin*'
+      value: Local
+  - wildcard:
+      match: '*tencent*'
+      value: Local
+  - wildcard:
+      match: '*.qq.com'
+      value: Local
+  - wildcard:
+      match: '*gtimg*'
+      value: Local
+  - wildcard:
+      match: '*qpic*'
+      value: Local
+  - wildcard:
+      match: '*myqcloud*'
+      value: Local
+  - wildcard:
+      match: '*qcloud*'
+      value: Local
+  - wildcard:
+      match: '*weixin*'
+      value: Local
+  - wildcard:
+      match: '*wechat*'
+      value: Local
+  - wildcard:
+      match: '*tenpay*'
+      value: Local
+  - wildcard:
+      match: '*qlogo*'
+      value: Local
+  - wildcard:
+      match: '*qqmail*'
+      value: Local
+  - wildcard:
+      match: '*wegame*'
+      value: Local
+  - wildcard:
+      match: '*soso*'
+      value: Local
+  - wildcard:
+      match: '*qzone*'
+      value: Local
+  - wildcard:
+      match: '*alibaba*'
+      value: Local
+  - wildcard:
+      match: '*alicdn*'
+      value: Local
+  - wildcard:
+      match: '*aliyun*'
+      value: Local
+  - wildcard:
+      match: '*taobao*'
+      value: Local
+  - wildcard:
+      match: '*tmall*'
+      value: Local
+  - wildcard:
+      match: '*alipay*'
+      value: Local
+  - wildcard:
+      match: '*aliimg*'
+      value: Local
+  - wildcard:
+      match: '*amap*'
+      value: Local
+  - wildcard:
+      match: '*autonavi*'
+      value: Local
+  - wildcard:
+      match: '*dingtalk*'
+      value: Local
+  - wildcard:
+      match: '*cainiao*'
+      value: Local
+  - wildcard:
+      match: '*1688*'
+      value: Local
+  - wildcard:
+      match: '*aliexpress*'
+      value: Local
+  - wildcard:
+      match: '*baidu*'
+      value: Local
+  - wildcard:
+      match: '*bdstatic*'
+      value: Local
+  - wildcard:
+      match: '*bdimg*'
+      value: Local
+  - wildcard:
+      match: '*bcebos*'
+      value: Local
+  - wildcard:
+      match: '*baidupcs*'
+      value: Local
+  - wildcard:
+      match: '*netease*'
+      value: Local
+  - wildcard:
+      match: '*163*'
+      value: Local
+  - wildcard:
+      match: '*126*'
+      value: Local
+  - wildcard:
+      match: '*yeah*'
+      value: Local
+  - wildcard:
+      match: '*ydstatic*'
+      value: Local
+  - wildcard:
+      match: '*jd.com'
+      value: Local
+  - wildcard:
+      match: '*jdcloud*'
+      value: Local
+  - wildcard:
+      match: '*jcloudcs*'
+      value: Local
+  - wildcard:
+      match: '*360buy*'
+      value: Local
+  - wildcard:
+      match: '*huawei*'
+      value: Local
+  - wildcard:
+      match: '*hicloud*'
+      value: Local
+  - wildcard:
+      match: '*vmall*'
+      value: Local
+  - wildcard:
+      match: '*honor*'
+      value: Local
+  - wildcard:
+      match: '*xiaomi*'
+      value: Local
+  - wildcard:
+      match: '*miui*'
+      value: Local
+  - wildcard:
+      match: '*mi.com'
+      value: Local
+  - wildcard:
+      match: '*miwifi*'
+      value: Local
+  - wildcard:
+      match: '*bilibili*'
+      value: Local
+  - wildcard:
+      match: '*bilivideo*'
+      value: Local
+  - wildcard:
+      match: '*biliapi*'
+      value: Local
+  - wildcard:
+      match: '*hdslb*'
+      value: Local
+  - wildcard:
+      match: '*acgvideo*'
+      value: Local
+  - wildcard:
+      match: '*weibo*'
+      value: Local
+  - wildcard:
+      match: '*sinaimg*'
+      value: Local
+  - wildcard:
+      match: '*sina*'
+      value: Local
+  - wildcard:
+      match: '*zhihu*'
+      value: Local
+  - wildcard:
+      match: '*zhimg*'
+      value: Local
+  - wildcard:
+      match: '*douban*'
+      value: Local
+  - wildcard:
+      match: '*meituan*'
+      value: Local
+  - wildcard:
+      match: '*dianping*'
+      value: Local
+  - wildcard:
+      match: '*pinduoduo*'
+      value: Local
+  - wildcard:
+      match: '*yangkeduo*'
+      value: Local
+  - wildcard:
+      match: '*kuaishou*'
+      value: Local
+  - wildcard:
+      match: '*gifshow*'
+      value: Local
+  - wildcard:
+      match: '*eleme*'
+      value: Local
+  - wildcard:
+      match: '*ele.me'
+      value: Local
+  - wildcard:
+      match: '*iqiyi*'
+      value: Local
+  - wildcard:
+      match: '*qiyi*'
+      value: Local
+  - wildcard:
+      match: '*youku*'
+      value: Local
+  - wildcard:
+      match: '*ykimg*'
+      value: Local
+  - wildcard:
+      match: '*tudou*'
+      value: Local
+  - wildcard:
+      match: '*sohu*'
+      value: Local
+  - wildcard:
+      match: '*sogou*'
+      value: Local
+  - wildcard:
+      match: '*.cloudflare.cn'
+      value: Local
+  - wildcard:
+      match: '*cloudflare-cn*'
+      value: Local
+  - wildcard:
+      match: '*cloudflarecn*'
+      value: Local
+  - wildcard:
+      match: '*360*'
+      value: Local
+  - wildcard:
+      match: '*qihoo*'
+      value: Local
+  - wildcard:
+      match: '*'
+      value: Remote
+  hosts:
+    doh.pub:
+    - 1.12.12.12
+    - 120.53.53.53
+    dns.alidns.com:
+    - 223.5.5.5
+    - 223.6.6.6
+    dns.google:
+    - 8.8.8.8
+    - 8.8.4.4
+    dns.cloudflare.com:
+    - 1.1.1.1
+    - 1.0.0.1
+  block_ips:
+  - 0.0.0.0
+  - 127.0.0.1
+  - 157.148.47.204
+  public_ip_lookup_url: http://ifconfig.me/ip
+policy_groups:
+- external:
+    name: 手动选择
+    type: select
+    urls:
+    - https://em.mesl.cloud/ems/get?token=61ba075286933f785d85d93c7c4a2dad
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/06jichang/hanbingyun.png
+    hidden: false
+- auto_test:
+    name: 自动选择
+    policies:
+    - 手动选择
+    flatten: true
+    filter: ^(?!.*((?i)回国|校园|BGP|游戏|GAME|官网|套餐|流量|到期|剩余|过期)).*$
+    interval: 600
+    tolerance: 100
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
+    hidden: true
+- select:
+    name: 国际媒体
+    policies:
+    - 自动选择
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+- select:
+    name: AI 服务
+    policies:
+    - 美国节点
+    - 日本节点
+    - 狮城节点
+    - 台湾节点
+    - 香港节点
+    - 手动选择
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+- select:
+    name: 微软服务
+    policies:
+    - DIRECT
+    - 自动选择
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+- select:
+    name: 谷歌服务
+    policies:
+    - 自动选择
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+- select:
+    name: 电报消息
+    policies:
+    - 自动选择
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+- select:
+    name: 推特消息
+    policies:
+    - 自动选择
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+- select:
+    name: 游戏平台
+    policies:
+    - DIRECT
+    - 自动选择
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+- select:
+    name: Forward
+    policies:
+    - 台湾节点
+    - 韩国节点
+    - 日本节点
+    - 狮城节点
+    - 美国节点
+    - 香港节点
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/forward(1).png
+- select:
+    name: 苹果服务
+    policies:
+    - DIRECT
+    - 自动选择
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - 手动选择
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+    hidden: true
+- select:
+    name: 哔哩哔哩
+    policies:
+    - DIRECT
+    - 香港节点
+    - 台湾节点
+    - 手动选择
+    flatten: false
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili.png
+    hidden: true
+- select:
+    name: Emby
+    policies:
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 韩国节点
+    - 台湾节点
+    - DIRECT
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+- select:
+    name: 兜底分流
+    policies:
+    - 自动选择
+    - DIRECT
+    - 香港节点
+    - 美国节点
+    - 狮城节点
+    - 日本节点
+    - 台湾节点
+    - 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+- auto_test:
+    name: 香港节点
+    policies:
+    - 手动选择
+    flatten: true
+    filter: ^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|BGP|游戏|(\b(GAME)\b))).*$
+    interval: 600
+    tolerance: 100
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    hidden: true
+- auto_test:
+    name: 美国节点
+    policies:
+    - 手动选择
+    flatten: true
+    filter: ^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$
+    interval: 600
+    tolerance: 100
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    hidden: true
+- auto_test:
+    name: 狮城节点
+    policies:
+    - 手动选择
+    flatten: true
+    filter: ^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$
+    interval: 600
+    tolerance: 100
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    hidden: true
+- auto_test:
+    name: 日本节点
+    policies:
+    - 手动选择
+    flatten: true
+    filter: ^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$
+    interval: 600
+    tolerance: 100
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    hidden: true
+- auto_test:
+    name: 韩国节点
+    policies:
+    - 手动选择
+    flatten: true
+    filter: ^(?=.*((?i)🇰🇷|韩国|韩|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$
+    interval: 600
+    tolerance: 100
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    hidden: true
+- auto_test:
+    name: 台湾节点
+    policies:
+    - 手动选择
+    flatten: true
+    filter: ^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|(\b(GAME)\b))).*$
+    interval: 600
+    tolerance: 100
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+    hidden: true
+rules:
+- rule_set:
+    name: 局域网
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Lan/Lan.list
+    policy: DIRECT
+- protocol:
+    match: QUIC
+    policy: REJECT
+- protocol:
+    match: NTP
+    policy: DIRECT
+- rule_set:
+    name: 屏蔽HTTP DNS
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/BlockHttpDNS/BlockHttpDNS.list
+    policy: REJECT
+- rule_set:
+    name: 隐私保护
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Privacy/Privacy_All.list
+    policy: REJECT
+- rule_set:
+    name: 广告拦截
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Advertising/Advertising_All.list
+    policy: REJECT
+- rule_set:
+    name: AWAvenue广告规则
+    match: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge.list
+    policy: REJECT
+- rule_set:
+    name: 字节跳动
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ByteDance/ByteDance.list
+    policy: DIRECT
+- rule_set:
+    name: 腾讯
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Tencent/Tencent.list
+    policy: DIRECT
+- rule_set:
+    name: 阿里巴巴
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Alibaba/Alibaba.list
+    policy: DIRECT
+- rule_set:
+    name: 下载服务
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Download/Download.list
+    policy: DIRECT
+- rule_set:
+    name: OpenAI
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/OpenAI/OpenAI.list
+    policy: AI 服务
+- rule_set:
+    name: Gemini
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Gemini/Gemini.list
+    policy: AI 服务
+- rule_set:
+    name: Claude
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Claude/Claude.list
+    policy: AI 服务
+- rule_set:
+    name: Copilot
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Copilot/Copilot.list
+    policy: AI 服务
+- rule_set:
+    name: AI规则合集
+    match: https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list
+    policy: AI 服务
+- rule_set:
+    name: OneDrive
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/OneDrive/OneDrive.list
+    policy: 微软服务
+- rule_set:
+    name: 微软
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Microsoft/Microsoft.list
+    policy: 微软服务
+- rule_set:
+    name: 谷歌推送
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/GoogleFCM/GoogleFCM.list
+    policy: 谷歌服务
+- rule_set:
+    name: YouTube
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/YouTube/YouTube.list
+    policy: 谷歌服务
+- rule_set:
+    name: 谷歌
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Google/Google.list
+    policy: 谷歌服务
+- rule_set:
+    name: Telegram
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Telegram/Telegram.list
+    policy: 电报消息
+- rule_set:
+    name: Twitter
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Twitter/Twitter.list
+    policy: 推特消息
+    disabled: false
+- rule_set:
+    name: Discord
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Discord/Discord.list
+    policy: 手动选择
+- rule_set:
+    name: Line
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Line/Line.list
+    policy: 手动选择
+- rule_set:
+    name: Reddit
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Reddit/Reddit.list
+    policy: 手动选择
+- rule_set:
+    name: GitHub
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/GitHub/GitHub.list
+    policy: 手动选择
+- rule_set:
+    name: PayPal
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/PayPal/PayPal.list
+    policy: 手动选择
+- rule_set:
+    name: OKX
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/OKX/OKX.list
+    policy: 手动选择
+- rule_set:
+    name: 币安
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Binance/Binance.list
+    policy: 手动选择
+- rule_set:
+    name: GoogleVoice
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/GoogleVoice/GoogleVoice.list
+    policy: 手动选择
+- rule_set:
+    name: Instagram
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Instagram/Instagram.list
+    policy: 手动选择
+- rule_set:
+    name: Facebook
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Facebook/Facebook.list
+    policy: 手动选择
+- rule_set:
+    name: 游戏
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Game/Game.list
+    policy: 游戏平台
+- rule_set:
+    name: Emby
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Emby/Emby.list
+    policy: Emby
+- rule_set:
+    name: Netflix
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Netflix/Netflix.list
+    policy: 国际媒体
+- rule_set:
+    name: Spotify
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Spotify/Spotify.list
+    policy: 国际媒体
+- rule_set:
+    name: Disney
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Disney/Disney.list
+    policy: 国际媒体
+- rule_set:
+    name: TikTok
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/TikTok/TikTok.list
+    policy: 国际媒体
+- rule_set:
+    name: 巴哈姆特
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Bahamut/Bahamut.list
+    policy: 国际媒体
+- rule_set:
+    name: HBO
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/HBO/HBO.list
+    policy: 国际媒体
+- rule_set:
+    name: PrimeVideo
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/PrimeVideo/PrimeVideo.list
+    policy: 国际媒体
+- rule_set:
+    name: TestFlight
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/TestFlight/TestFlight.list
+    policy: DIRECT
+- rule_set:
+    name: AppStore
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/AppStore/AppStore.list
+    policy: DIRECT
+- rule_set:
+    name: AppleSoftwareUpdate
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/AppleSoftwareUpdate/AppleSoftwareUpdate.list
+    policy: DIRECT
+- rule_set:
+    name: iCloud
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/iCloud/iCloud.list
+    policy: DIRECT
+- rule_set:
+    name: Siri
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Siri/Siri.list
+    policy: DIRECT
+- rule_set:
+    name: 苹果
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Apple/Apple_All.list
+    policy: 苹果服务
+- rule_set:
+    name: 哔哩哔哩
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/BiliBili/BiliBili.list
+    policy: 哔哩哔哩
+- rule_set:
+    name: 微信
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/WeChat/WeChat.list
+    policy: DIRECT
+- rule_set:
+    name: 支付宝
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/AliPay/AliPay.list
+    policy: DIRECT
+- rule_set:
+    name: 网易云音乐
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/NetEaseMusic/NetEaseMusic.list
+    policy: DIRECT
+- rule_set:
+    name: 抖音
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/DouYin/DouYin.list
+    policy: DIRECT
+- rule_set:
+    name: 微博
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Weibo/Weibo.list
+    policy: DIRECT
+- rule_set:
+    name: 小红书
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/XiaoHongShu/XiaoHongShu.list
+    policy: DIRECT
+- rule_set:
+    name: 京东
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/JingDong/JingDong.list
+    policy: DIRECT
+- rule_set:
+    name: 拼多多
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Pinduoduo/Pinduoduo.list
+    policy: DIRECT
+- rule_set:
+    name: 美团
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/MeiTuan/MeiTuan.list
+    policy: DIRECT
+- rule_set:
+    name: 饿了么
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Eleme/Eleme.list
+    policy: DIRECT
+- rule_set:
+    name: 滴滴出行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/DiDi/DiDi.list
+    policy: DIRECT
+- rule_set:
+    name: 携程
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/XieCheng/XieCheng.list
+    policy: DIRECT
+- rule_set:
+    name: 高德地图
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/GaoDe/GaoDe.list
+    policy: DIRECT
+- rule_set:
+    name: 百度
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Baidu/Baidu.list
+    policy: DIRECT
+- rule_set:
+    name: 网易
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/NetEase/NetEase.list
+    policy: DIRECT
+- rule_set:
+    name: 快手
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/KuaiShou/KuaiShou.list
+    policy: DIRECT
+- rule_set:
+    name: 爱奇艺
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/iQIYI/iQIYI.list
+    policy: DIRECT
+- rule_set:
+    name: 腾讯视频
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/TencentVideo/TencentVideo.list
+    policy: DIRECT
+- rule_set:
+    name: 优酷
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Youku/Youku.list
+    policy: DIRECT
+- rule_set:
+    name: QQ音乐
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/QQMusic/QQMusic.list
+    policy: DIRECT
+- rule_set:
+    name: 知乎
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/Zhihu/Zhihu.list
+    policy: DIRECT
+- rule_set:
+    name: 豆瓣
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/DouBan/DouBan.list
+    policy: DIRECT
+- rule_set:
+    name: 建设银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/CCB/CCB.list
+    policy: DIRECT
+- rule_set:
+    name: 招商银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/CMB/CMB.list
+    policy: DIRECT
+- rule_set:
+    name: 中国银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/BOC/BOC.list
+    policy: DIRECT
+- rule_set:
+    name: 农业银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ABC/ABC.list
+    policy: DIRECT
+- rule_set:
+    name: 工商银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ICBC/ICBC.list
+    policy: DIRECT
+- rule_set:
+    name: 交通银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/BOCOM/BOCOM.list
+    policy: DIRECT
+- rule_set:
+    name: 邮政银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/PSBC/PSBC.list
+    policy: DIRECT
+- rule_set:
+    name: 广发银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/CGB/CGB.list
+    policy: DIRECT
+- rule_set:
+    name: 光大银行
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/CEB/CEB.list
+    policy: DIRECT
+- rule_set:
+    name: 中国联通
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaUnicom/ChinaUnicom.list
+    policy: DIRECT
+- rule_set:
+    name: 中国电信
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaTelecom/ChinaTelecom.list
+    policy: DIRECT
+- rule_set:
+    name: 中国移动
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaMobile/ChinaMobile.list
+    policy: DIRECT
+- rule_set:
+    name: 中国大陆
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaMax/ChinaMax.list
+    policy: DIRECT
+- rule_set:
+    name: 中国媒体
+    match: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Surge/ChinaMedia/ChinaMedia.list
+    policy: DIRECT
+- geoip:
+    match: CN
+    policy: DIRECT
+- default:
+    policy: 兜底分流
+url_rewrites:
+- match: ^https?://(.*?L[.])?(?:glgoogle).cn
+  location: https://$1google.com
+  status_code: 302
+mitm:
+  enabled: true
+  ca_p12: egern.p12
+  ca_passphrase: egern
+modules:
+- url: http://script.hub/file/_start_/https://loonhub.wuyra.com/Lpx/Block_HTTPDNS.lpx/_end_/Lpx/Block_HTTPDNS.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://loonhub.wuyra.com/Lpx/BlockAdvertisters.lpx/_end_/Lpx/BlockAdvertisters.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx/_end_/Remove_ads_by_keli.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx/_end_/FleaMarket_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx/_end_/Taobao_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/QiDian_remove_ads.lpx/_end_/QiDian_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/MeetYou_remove_ads.lpx/_end_/MeetYou_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/QuarkScanking_remove_ads.lpx/_end_/QuarkScanking_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/QuarkBrowser_remove_ads.lpx/_end_/QuarkBrowser_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx/_end_/JD_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx/_end_/Amap_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Dewu_remove_ads.lpx/_end_/Dewu_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx/_end_/BaiduSearchWebpage_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/iQiYi_Video_remove_ads.lpx/_end_/iQiYi_Video_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx/_end_/WexinMiniPrograms_Remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx/_end_/Weixin_external_links_unlock.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx/_end_/Weixin_Official_Accounts_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: https://raw.githubusercontent.com/ByteValley/NetTool/main/Surge/Module/Dashboard/SubscribeInfo.module
+  compat_arguments:
+    Title1: Mesl
+    URL1: https://em.mesl.cloud/ems/get?token=61ba075286933f785d85d93c7c4a2dad
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js/_end_/jd_price.sgmodule?type=qx-rewrite&n=京东历史比价功能增强@wf021325+慢慢买获取ck后使用&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module
+  enabled: true
+- url: http://script.hub/file/_start_/https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.snippet/_end_/iRingo.WeatherKit.sgmodule?type=qx-rewrite&n=WeatherKit功能增强@NSRingo+解锁苹果天气&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module
+  enabled: true
+- url: https://raw.githubusercontent.com/xxxjacc/SurgeModule/main/ForwardWidgetFilter.sgmodule
+  compat_arguments:
+    proxy: Forward
+  enabled: true
+- url: http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=墨鱼去开屏2.0去广告@ddgksf2013+已抓包400余应用去开屏&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/app2smile/rules/master/module/qidian.conf/_end_/qidian.sgmodule?type=qx-rewrite&n=起点去广告@app2smile+应用净化&headers=User-Agent:surge&del=true&jqEnabled=true&target=surge-module
+  enabled: true
+- url: https://raw.githubusercontent.com/Likhixang/Egerny/main/sgmodule/ddgksf2Egern.sgmodule
+  enabled: true
+- url: https://raw.githubusercontent.com/ByteValley/NetTool/main/Surge/Module/Dashboard/NetworkInfo.module
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx/_end_/QQMusic_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx/_end_/QQ_Redirect.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://loonhub.wuyra.com/Lpx/BlockAds.lpx/_end_/Lpx/BlockAds.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://loonhub.wuyra.com/Lpx/Taobao_remove_ads.lpx/_end_/Lpx/Taobao_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://loonhub.wuyra.com/Lpx/JD_remove_ads.lpx/_end_/Lpx/JD_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://loonhub.wuyra.com/Lpx/Amap_remove_ads.lpx/_end_/Lpx/Amap_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: http://script.hub/file/_start_/https://loonhub.wuyra.com/Lpx/Cainiao_remove_ads.lpx/_end_/Lpx/Cainiao_remove_ads.sgmodule?type=loon-plugin&target=surge-module&del=true&jqEnabled=true&pm=.&sni=.
+  enabled: true
+- url: https://raw.githubusercontent.com/obs1379/Egern/refs/heads/main/surge.qingr.moe_for_Egern.sgmodule
+  enabled: true
+- name: egern转换
+  url: egern转换
+  enabled: true
+- name: DNS 分流
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%F0%9F%8D%9F%20DNS%20%E5%88%86%E6%B5%81.official.sgmodule
+  enabled: true
+- name: 通用模块
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%F0%9F%8D%9F%20%E9%80%9A%E7%94%A8%E6%A8%A1%E5%9D%97.official.sgmodule
+  enabled: true
+- name: 局域网绕过
+  url: https://raw.githubusercontent.com/mieqq/mieqq/master/skip-proxy-lists.sgmodule
+  enabled: true
+- name: 阿里系去广告
+  url: https://limbopro.com/Adblock4limbo.sgmodule
+  enabled: true
+- name: 彩云天气破解
+  url: http://script.hub/file/_start_/https://raw.githubusercontent.com/wf021325/qx/master/js/caiyun.js/_end_/caiyun.sgmodule?type=qx-rewrite&target=surge-module&del=true
+  enabled: true
+- name: B站增强 (核心功能)
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%F0%9F%8D%9F%20BiliEnhanced.official.sgmodule
+  enabled: true
+- name: B站去广告
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%F0%9F%8D%9F%20BiliADBlock.official.sgmodule
+  enabled: true
+- name: BoxJs
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%E2%AD%90%EF%B8%8F%20BoxJs.official.sgmodule
+  enabled: true
+- name: Sub-Store
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%E2%AD%90%EF%B8%8F%20Sub-Store.official.sgmodule
+  enabled: true
+- name: Script Hub
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/%E2%AD%90%EF%B8%8F%20Script%20Hub.official.sgmodule
+  enabled: true
+- url: https://whatshub.top/module/drafts.module
+  enabled: true
+- url: https://whatshub.top/module/flomo.module
+  enabled: true
+- name: YouTube去广告 (Maasea)
+  url: https://raw.githubusercontent.com/Maasea/sgmodule/master/YouTube.Enhance.sgmodule
+  enabled: true
+- name: 流媒体解锁检测
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/流媒体解锁检测.official.sgmodule
+  enabled: true
+- name: 节点测速
+  url: https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Official/节点测速.official.sgmodule
+  enabled: true
+- name: Google重定向
+  url: https://raw.githubusercontent.com/cc63/Surge/main/Module/Spec/Google_Rewrite.sgmodule
+  enabled: true
