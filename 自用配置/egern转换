@@ -1,0 +1,31 @@
+name: 可莉插件中心2Egern (Mod)
+description: 支持可莉插件中心、Wuyra LoonHub及WhatsHub的插件给Egern使用; 使用前请先添加ScriptHub模块. 插件中心网址 https://pluginhub.kelee.one , https://loonhub.wuyra.com 及 https://whatshub.top/surge
+author: 原作者@iKeLee, Mod by Gemini
+dns: {}
+body_rewrites:
+# 原有规则：针对 pluginhub.kelee.one
+- response_regex:
+    match: https://pluginhub\.kelee\.one/(?:Lpx_)?list\.json
+    find: loon://import\?plugin=(https://kelee\.one/Tool/Loon/Lpx/(.+?)\.lpx)
+    replace: egern:///modules/new?url=http://script.hub/file/_start_/$1/_end_/$2.sgmodule%3Ftype%3Dloon-plugin%26target%3Dsurge-module%26del%3Dtrue%26jqEnabled%3Dtrue%26pm%3D.%26sni%3D.
+
+# 原有规则：针对 loonhub.wuyra.com
+- response_regex:
+    match: https://loonhub\.wuyra\.com/.*
+    find: loon://import\?plugin=(https?://.+?/(.+?)\.lpx)
+    replace: egern:///modules/new?url=http://script.hub/file/_start_/$1/_end_/$2.sgmodule%3Ftype%3Dloon-plugin%26target%3Dsurge-module%26del%3Dtrue%26jqEnabled%3Dtrue%26pm%3D.%26sni%3D.
+
+# 新增规则：针对 whatshub.top (Surge模块直接协议替换)
+- response_regex:
+    match: https://whatshub\.top/.*
+    find: surge:///install-module\?url=
+    replace: egern:///modules/new?url=
+
+mitm:
+  hostnames:
+    includes:
+    - pluginhub.kelee.one
+    - loonhub.wuyra.com
+    - whatshub.top
+
+
